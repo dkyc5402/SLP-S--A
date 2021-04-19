@@ -2,33 +2,59 @@
 <ion-content>
   <div class="maincontent">
   <ion-grid class="center">
+
+  <!--Welcome Card-->
+  <ion-row>
+    <ion-card color="light" id="welcome_card">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="9">
+            <ion-row>
+              <ion-label id="welcome_name" style="font-weight:bold; font-size: 20px;">Welcome bub</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label id="instructor_school" style="font-size: 16px;">Instructor in sch</ion-label>
+            </ion-row>
+          </ion-col>
+
+          <ion-col size="3">
+            <img src="../../../assets/images/person.png" alt="User Avatar" height="60px" style="border-radius: 20px;" />
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+
+    </ion-card>
+  </ion-row>
+
+<!-- Functions -->
     <ion-row>
-      <ion-col>
+      <!-- <ion-col>
         <div>
           <button (click)="InitiateSession()"><img src="assets/images/enrollment.png" alt="Initiate Session"></button>
           <div style="font-size: large;">Request Tuition</div>
         </div>
-      </ion-col>
+      </ion-col> -->
       <ion-col>
         <div>
           <button (click)="JoinSession()"><img src="assets/images/html.png" alt="Join Session"></button>
-          <div style="font-size: large;">Join Session</div>
+          <div style="font-size: large;">Tutor Session</div>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
+    <!-- </ion-row>
+    <ion-row> -->
       <ion-col>
         <div>
           <button (click)="MySession()"><img src="assets/images/assignment.png" alt="My Session"><br/></button><span></span>
           <div style="font-size: large;">My Sessions</div>
         </div>
       </ion-col>
-      <ion-col>
+      <!-- <ion-col>
         <div>
           <button (click)="Help()"><img src="assets/images/question.png" alt="Help"><br/></button>
           <div style="font-size: large;">Help</div>
         </div>
-      </ion-col>
+      </ion-col> -->
     </ion-row>
     </ion-grid>
   </div>

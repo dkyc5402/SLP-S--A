@@ -49,5 +49,9 @@ export class MainPage implements OnInit {
   Help(){
     this.router.navigateByUrl('tabs/support/logout');
   }
+
+  //Retrieve Account Info
+
+
   
 }
