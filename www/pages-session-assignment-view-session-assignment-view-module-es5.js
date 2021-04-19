@@ -36058,7 +36058,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\r\n  <app-session-header></app-session-header>\r\n  <ion-segment [(ngModel)]=\"segmentModel\" (ionChange)=\"segmentChanged($event)\">\r\n    <ion-segment-button class=\"{{isactivevideoorvoice}}\" value=\"conferencing\">\r\n      <ion-label>Conferencing</ion-label>\r\n    </ion-segment-button>\r\n    <ion-segment-button class=\"{{isactiveassignment}}\" value=\"assignment\">\r\n      <ion-label>Assignment</ion-label>\r\n    </ion-segment-button>\r\n    <ion-segment-button class=\"{{isactiveanalysis}}\" value=\"analysis\">\r\n      <ion-label>Analysis</ion-label>\r\n    </ion-segment-button>\r\n  </ion-segment>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-refresher slot='fixed' (ionRefresh)='UpdateData($event)'>\r\n    <ion-refresher-content></ion-refresher-content>\r\n  </ion-refresher>\r\n  <div *ngIf=\"segmentModel === 'conferencing'\">\r\n    <ion-col>\r\n      <div style=\"text-align: center;\">No Conference Call</div>\r\n    </ion-col>\r\n  </div>\r\n  <div *ngIf=\"segmentModel === 'assignment'\">\r\n    <div class=\"thirdcontent\">\r\n\r\n      <div class=\"box\" *ngIf=\"asgmtlist&&this.sessionstatus!==this.sessionstatusended\">\r\n        <ion-label>\r\n          [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}\r\n        </ion-label>\r\n        <ion-icon style=\"position: absolute;right:1em;zoom:1.3\" button src=\"assets/images/1001-cross.svg\"\r\n          (click)=\"PreviousPage()\"></ion-icon>\r\n        <br />\r\n      </div>\r\n      <div class=\"boxSessionEnd\" *ngIf=\"asgmtlist&&this.sessionstatus===this.sessionstatusended\">\r\n        <ion-label>\r\n          [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}\r\n        </ion-label>\r\n        <ion-icon style=\"position: absolute;right:1em;zoom:1.3\" button src=\"assets/images/1001-cross.svg\"\r\n          (click)=\"PreviousPage()\"></ion-icon>\r\n        <br />\r\n      </div>\r\n\r\n      <div class=\"center\">\r\n        <ion-card *ngIf=\"asgmtlist\">\r\n          <b style=\"font-size: x-large;color:black\">Question</b>\r\n          <ion-item>\r\n            <ion-img *ngIf=\"asgmtlist.asgmt_Data==null\" ionImgViewer style=\"width:10em;height:10em;\"\r\n              src=\"assets/images/noimage.png\"></ion-img>\r\n            <img (click)=\"presentModalImage(imgdisplayinapp)\" *ngIf=\"asgmtlist.asgmt_Data!=null\"\r\n              style=\"width:10em;height:10em;\" [src]=\"imgdisplayinapp\">\r\n            <ion-button *ngIf=\"asgmtlist.created_By===this.studentid&&this.sessionstatus!==this.sessionstatusended\"\r\n              slot=\"end\" style=\"font-size: larger;color:white;\" (click)=\"EditDrawing()\">Edit</ion-button>\r\n          </ion-item>\r\n          <ion-card-content style=\"font-size: large;color:black;padding: 0em;\">\r\n            {{asgmtlist.asgmt_Value}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n        <ion-card>\r\n          <b style=\"font-size: x-large;color:black\">Discussion</b>\r\n          <div class=\"scrolling-wrapper\">\r\n            <div *ngFor=\"let asgmtlist of asgmtdiscusslist\" class=\"card\">\r\n              <h2>\r\n                <ion-label style=\"font-size: medium;\">{{asgmtlist.created_On | date:'medium'}}</ion-label><br />\r\n                <img style=\"width:10em;height:10em\" (click)=\"presentModalDiscussImage(asgmtlist.asgmtDiscuss_Data)\"\r\n                  *ngIf=\"asgmtlist.asgmtDiscuss_Data!=null\" [src]=\"this.display(asgmtlist.asgmtDiscuss_Data)\"><br />\r\n                <ion-label style=\"font-size: medium;\" *ngIf=\"asgmtlist.created_By_Username!=null\">Commented By:\r\n                  <b>{{asgmtlist.created_By_Username}} ({{asgmtlist.created_By_Level}})</b>\r\n                </ion-label><br />\r\n                <ion-label style=\"font-size: medium;\" *ngIf=\"asgmtlist.created_By_Username==null\">Commented By:\r\n                  <b>{{tutornamefordisplay}}</b>\r\n                </ion-label><br />\r\n              </h2>\r\n            </div>\r\n          </div>\r\n        </ion-card>\r\n      </div>\r\n    </div>\r\n    <!-- </div> -->\r\n  </div>\r\n  <div [hidden]=\"!(segmentModel === 'analysis')\">\r\n    <ion-card class=\"welcome-card\">\r\n      <ion-card-header>\r\n        <ion-card-subtitle>IN SECONDS</ion-card-subtitle>\r\n        <ion-card-title>Duration of Emotion Experienced</ion-card-title>\r\n      </ion-card-header>\r\n      <ion-card-content>\r\n        <canvas height=\"500\" #barChart></canvas>\r\n      </ion-card-content>\r\n    </ion-card>\r\n  </div>\r\n</ion-content>\r\n<ion-footer>\r\n  <ion-fab-button *ngIf=\"segmentModel === 'assignment'&&asgmtlist\" (click)=\"StayonPage(asgmtlist.asgmt_Id)\"\r\n    vertical=\"end\" horizontal=\"end\" style=\"position: absolute;bottom: 1em;right: 1em;\"><img\r\n      style=\"width:3em;height:3em;\" src=\"assets/images/chat-1.svg\"></ion-fab-button>\r\n</ion-footer>";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <app-session-header></app-session-header>\r\n  <ion-segment [(ngModel)]=\"segmentModel\" (ionChange)=\"segmentChanged($event)\">\r\n    <ion-segment-button class=\"{{isactivevideoorvoice}}\" value=\"conferencing\">\r\n      <ion-label>Conferencing</ion-label>\r\n    </ion-segment-button>\r\n    <ion-segment-button class=\"{{isactiveassignment}}\" value=\"assignment\">\r\n      <ion-label>Assignment</ion-label>\r\n    </ion-segment-button>\r\n    <ion-segment-button class=\"{{isactiveanalysis}}\" value=\"analysis\">\r\n      <ion-label>Analysis</ion-label>\r\n    </ion-segment-button>\r\n  </ion-segment>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-refresher slot='fixed' (ionRefresh)='UpdateData($event)'>\r\n    <ion-refresher-content></ion-refresher-content>\r\n  </ion-refresher>\r\n  <div *ngIf=\"segmentModel === 'conferencing'\">\r\n    <ion-col>\r\n      <div style=\"text-align: center;\">No Conference Call</div>\r\n    </ion-col>\r\n  </div>\r\n  <div *ngIf=\"segmentModel === 'assignment'\">\r\n    <div class=\"thirdcontent\">\r\n\r\n      <div class=\"box\" *ngIf=\"asgmtlist&&this.sessionstatus!==this.sessionstatusended\">\r\n        <ion-label>\r\n          [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}\r\n        </ion-label>\r\n        <ion-icon style=\"position: absolute;right:1em;zoom:1.3\" button src=\"assets/images/1001-cross.svg\"\r\n          (click)=\"PreviousPage()\"></ion-icon>\r\n        <br />\r\n      </div>\r\n      <div class=\"boxSessionEnd\" *ngIf=\"asgmtlist&&this.sessionstatus===this.sessionstatusended\">\r\n        <ion-label>\r\n          [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}\r\n        </ion-label>\r\n        <ion-icon style=\"position: absolute;right:1em;zoom:1.3\" button src=\"assets/images/1001-cross.svg\"\r\n          (click)=\"PreviousPage()\"></ion-icon>\r\n        <br />\r\n      </div>\r\n\r\n      <div class=\"center\">\r\n        <ion-card *ngIf=\"asgmtlist\">\r\n          <b style=\"font-size: x-large;color:black\">Question</b>\r\n          <ion-item>\r\n            <ion-img *ngIf=\"asgmtlist.asgmt_Data==null\" ionImgViewer style=\"width:10em;height:10em;\"\r\n              src=\"assets/images/noimage.png\"></ion-img>\r\n            <img (click)=\"presentModalImage(imgdisplayinapp)\" *ngIf=\"asgmtlist.asgmt_Data!=null\"\r\n              style=\"width:10em;height:10em;\" [src]=\"imgdisplayinapp\">\r\n            <ion-button *ngIf=\"asgmtlist.created_By===this.studentid&&this.sessionstatus!==this.sessionstatusended\"\r\n              slot=\"end\" style=\"font-size: larger;color:white;\" (click)=\"EditDrawing()\">Edit</ion-button>\r\n          </ion-item>\r\n          <ion-card-content style=\"font-size: large;color:black;padding: 0em;\">\r\n            {{asgmtlist.asgmt_Value}}\r\n          </ion-card-content>\r\n        </ion-card>\r\n        <ion-card>\r\n          <b style=\"font-size: x-large;color:black\">Discussion</b>\r\n          <div class=\"scrolling-wrapper\">\r\n            <div *ngFor=\"let asgmtlist of asgmtdiscusslist\" class=\"card\">\r\n              <h2>\r\n                <ion-label style=\"font-size: medium;\">{{asgmtlist.created_On | date:'medium'}}</ion-label><br />\r\n                <img style=\"width:10em;height:10em\" (click)=\"presentModalDiscussImage(asgmtlist.asgmtDiscuss_Data)\"\r\n                  *ngIf=\"asgmtlist.asgmtDiscuss_Data!=null\" [src]=\"this.display(asgmtlist.asgmtDiscuss_Data)\"><br />\r\n                <ion-label style=\"font-size: medium;\" *ngIf=\"asgmtlist.created_By_Username!=null\">Commented By:\r\n                  <b>{{asgmtlist.created_By_Username}} ({{asgmtlist.created_By_Level}})</b>\r\n                </ion-label><br />\r\n                <ion-label style=\"font-size: medium;\" *ngIf=\"asgmtlist.created_By_Username==null\">Commented By:\r\n                  <b>{{tutornamefordisplay}}</b>\r\n                </ion-label><br />\r\n              </h2>\r\n            </div>\r\n          </div>\r\n        </ion-card>\r\n      </div>\r\n    </div>\r\n    <!-- </div> -->\r\n  </div>\r\n  <div [hidden]=\"!(segmentModel === 'analysis')\">\r\n    <ion-card class=\"card-chart\" #cardChart>\r\n      <ion-card-header>\r\n        <ion-card-title>Emotion Analysis (s)</ion-card-title>\r\n      </ion-card-header>\r\n      <ion-card-content>\r\n        <div id=\"chartRapper\">\r\n          <div id=\"chartWrapper\">\r\n            <canvas id=\"analysisBarChart\" #barChart height=\"1026\" width=\"616\"></canvas>\r\n          </div>\r\n        </div>\r\n        <ion-grid id=\"tapPopupInfo\">\r\n          <ion-row id=\"helpText\">\r\n            <ion-col>\r\n              Tap on the graph for more information!\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n      </ion-card-content>\r\n    </ion-card>\r\n  </div>\r\n</ion-content>\r\n<ion-footer>\r\n  <ion-fab-button *ngIf=\"segmentModel === 'assignment'&&asgmtlist\" (click)=\"StayonPage(asgmtlist.asgmt_Id)\"\r\n    vertical=\"end\" horizontal=\"end\" style=\"position: absolute;bottom: 1em;right: 1em;\"><img\r\n      style=\"width:3em;height:3em;\" src=\"assets/images/chat-1.svg\"></ion-fab-button>\r\n</ion-footer>";
     /***/
   },
 
@@ -36261,7 +36261,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".center {\n  text-align: center;\n}\n\n.scrolling-wrapper {\n  overflow-x: scroll;\n  overflow-y: hidden;\n  white-space: nowrap;\n}\n\n.scrolling-wrapper .card {\n  display: inline-block;\n}\n\nion-item {\n  border: none;\n  padding: 0em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2Vzc2lvbi1hc3NpZ25tZW50LXZpZXcvQzpcXFVzZXJzXFxMMzA5MDNcXERvY3VtZW50c1xcR2l0SHViXFxJb25pY0ZQQW5hbHlzaXMvc3JjXFxhcHBcXHBhZ2VzXFxzZXNzaW9uLWFzc2lnbm1lbnQtdmlld1xcc2Vzc2lvbi1hc3NpZ25tZW50LXZpZXcucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9zZXNzaW9uLWFzc2lnbm1lbnQtdmlldy9zZXNzaW9uLWFzc2lnbm1lbnQtdmlldy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtBQ0NKOztBRENFO0VBQ0Usa0JBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FDRUo7O0FEQUk7RUFDRSxxQkFBQTtBQ0VOOztBRENFO0VBQ0UsWUFBQTtFQUNBLFlBQUE7QUNFSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Nlc3Npb24tYXNzaWdubWVudC12aWV3L3Nlc3Npb24tYXNzaWdubWVudC12aWV3LnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jZW50ZXJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG4gIC5zY3JvbGxpbmctd3JhcHBlciB7XHJcbiAgICBvdmVyZmxvdy14OiBzY3JvbGw7XHJcbiAgICBvdmVyZmxvdy15OiBoaWRkZW47XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gIFxyXG4gICAgLmNhcmQge1xyXG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB9XHJcbiAgfVxyXG4gIGlvbi1pdGVtIHtcclxuICAgIGJvcmRlcjpub25lO1xyXG4gICAgcGFkZGluZzogMGVtO1xyXG4gIH0iLCIuY2VudGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uc2Nyb2xsaW5nLXdyYXBwZXIge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIG92ZXJmbG93LXk6IGhpZGRlbjtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbn1cbi5zY3JvbGxpbmctd3JhcHBlciAuY2FyZCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuaW9uLWl0ZW0ge1xuICBib3JkZXI6IG5vbmU7XG4gIHBhZGRpbmc6IDBlbTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".center {\n  text-align: center;\n}\n\n.scrolling-wrapper {\n  overflow-x: scroll;\n  overflow-y: hidden;\n  white-space: nowrap;\n}\n\n.scrolling-wrapper .card {\n  display: inline-block;\n}\n\nion-item {\n  border: none;\n  padding: 0em;\n}\n\n.card-chart {\n  height: 550px;\n  overflow: scroll;\n}\n\n#chartRapper {\n  height: 300px;\n  overflow-y: scroll;\n}\n\n#tapPopupInfo {\n  padding-top: 15px;\n}\n\n#helpText {\n  display: none;\n  color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2Vzc2lvbi1hc3NpZ25tZW50LXZpZXcvQzpcXFVzZXJzXFxEYW5hZVxcRGVza3RvcFxcRllQSlxcU0xQLVMtLUEvc3JjXFxhcHBcXHBhZ2VzXFxzZXNzaW9uLWFzc2lnbm1lbnQtdmlld1xcc2Vzc2lvbi1hc3NpZ25tZW50LXZpZXcucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9zZXNzaW9uLWFzc2lnbm1lbnQtdmlldy9zZXNzaW9uLWFzc2lnbm1lbnQtdmlldy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtBQ0NKOztBRENFO0VBQ0Usa0JBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FDRUo7O0FEQUk7RUFDRSxxQkFBQTtBQ0VOOztBRENFO0VBQ0UsWUFBQTtFQUNBLFlBQUE7QUNFSjs7QURDQTtFQUNFLGFBQUE7RUFDQSxnQkFBQTtBQ0VGOztBRENBO0VBQ0UsYUFBQTtFQUNBLGtCQUFBO0FDRUY7O0FEQ0E7RUFDRSxpQkFBQTtBQ0VGOztBRENBO0VBQ0UsYUFBQTtFQUNBLFlBQUE7QUNFRiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Nlc3Npb24tYXNzaWdubWVudC12aWV3L3Nlc3Npb24tYXNzaWdubWVudC12aWV3LnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jZW50ZXJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG4gIC5zY3JvbGxpbmctd3JhcHBlciB7XHJcbiAgICBvdmVyZmxvdy14OiBzY3JvbGw7XHJcbiAgICBvdmVyZmxvdy15OiBoaWRkZW47XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gIFxyXG4gICAgLmNhcmQge1xyXG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB9XHJcbiAgfVxyXG4gIGlvbi1pdGVtIHtcclxuICAgIGJvcmRlcjpub25lO1xyXG4gICAgcGFkZGluZzogMGVtO1xyXG4gIH1cclxuXHJcbi5jYXJkLWNoYXJ0IHtcclxuICBoZWlnaHQ6IDU1MHB4O1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcbiNjaGFydFJhcHBlciB7XHJcbiAgaGVpZ2h0OiAzMDBweDtcclxuICBvdmVyZmxvdy15OiBzY3JvbGw7XHJcbn1cclxuXHJcbiN0YXBQb3B1cEluZm8ge1xyXG4gIHBhZGRpbmctdG9wOjE1cHg7XHJcbn1cclxuXHJcbiNoZWxwVGV4dCB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxuICBjb2xvcjogYmxhY2s7XHJcbn0iLCIuY2VudGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uc2Nyb2xsaW5nLXdyYXBwZXIge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIG92ZXJmbG93LXk6IGhpZGRlbjtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbn1cbi5zY3JvbGxpbmctd3JhcHBlciAuY2FyZCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuaW9uLWl0ZW0ge1xuICBib3JkZXI6IG5vbmU7XG4gIHBhZGRpbmc6IDBlbTtcbn1cblxuLmNhcmQtY2hhcnQge1xuICBoZWlnaHQ6IDU1MHB4O1xuICBvdmVyZmxvdzogc2Nyb2xsO1xufVxuXG4jY2hhcnRSYXBwZXIge1xuICBoZWlnaHQ6IDMwMHB4O1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG59XG5cbiN0YXBQb3B1cEluZm8ge1xuICBwYWRkaW5nLXRvcDogMTVweDtcbn1cblxuI2hlbHBUZXh0IHtcbiAgZGlzcGxheTogbm9uZTtcbiAgY29sb3I6IGJsYWNrO1xufSJdfQ== */";
     /***/
   },
 
@@ -36380,7 +36380,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var chart_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_14__);
 
     var SessionAssignmentViewPage = /*#__PURE__*/function () {
-      function SessionAssignmentViewPage(ngZone, nativeHttp, globalService, platform, sessionmypage, dms, router, activatedRoute, modalController, assignmentsService, storage, networkService) {
+      function SessionAssignmentViewPage(ngZone, nativeHttp, globalService, platform, sessionmypage, loadingController, dms, router, activatedRoute, modalController, assignmentsService, storage, networkService) {
         _classCallCheck(this, SessionAssignmentViewPage);
 
         this.ngZone = ngZone;
@@ -36388,6 +36388,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.globalService = globalService;
         this.platform = platform;
         this.sessionmypage = sessionmypage;
+        this.loadingController = loadingController;
         this.dms = dms;
         this.router = router;
         this.activatedRoute = activatedRoute;
@@ -36556,11 +36557,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.isactivevideoorvoice = "inactivesegment";
             this.isactiveanalysis = "inactivesegment";
           } else if (this.segmentModel == "analysis") {
-            // console.log("analysis tab")
             this.isactiveassignment = "inactivesegment";
             this.isactivevideoorvoice = "inactivesegment";
             this.isactiveanalysis = "activesegment";
             this.createBarChart();
+            this.presentLoading();
           }
         }
         /*Chat Pop up*/
@@ -36641,45 +36642,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "display",
         value: function display(bImg) {
           return this.dms.bypassSecurityTrustResourceUrl("data:image/png;base64, " + bImg);
-        } //Display Image 
+        } //Loading Pop up
 
       }, {
-        key: "presentModalImage",
-        value: function presentModalImage(imgdisplayinapp) {
+        key: "presentLoading",
+        value: function presentLoading() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-            var modal;
             return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
                 switch (_context3.prev = _context3.next) {
                   case 0:
                     _context3.next = 2;
-                    return this.modalController.create({
-                      component: _shared_module_session_view_image_discussion_session_view_image_discussion_page__WEBPACK_IMPORTED_MODULE_11__["SessionViewImageDiscussionPage"],
-                      componentProps: {
-                        imagedisplay: this.imgdisplayinapp,
-                        discussimgdisplayinapp: this.asgmtlist.asgmtDiscuss_Data
-                      }
+                    return this.loadingController.create({
+                      message: 'Please Wait',
+                      cssClass: 'custom-class custom-loading',
+                      duration: 60000,
+                      backdropDismiss: false
                     });
 
                   case 2:
-                    modal = _context3.sent;
+                    this.loading = _context3.sent;
                     _context3.next = 5;
-                    return modal.present();
+                    return this.loading.present();
 
                   case 5:
-                    return _context3.abrupt("return", _context3.sent);
-
-                  case 6:
                   case "end":
                     return _context3.stop();
                 }
               }
             }, _callee3, this);
           }));
-        }
+        } //Display Image 
+
       }, {
-        key: "presentModalDiscussImage",
-        value: function presentModalDiscussImage(imgdisplayinapp) {
+        key: "presentModalImage",
+        value: function presentModalImage(imgdisplayinapp) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
             var modal;
             return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -36690,7 +36687,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return this.modalController.create({
                       component: _shared_module_session_view_image_discussion_session_view_image_discussion_page__WEBPACK_IMPORTED_MODULE_11__["SessionViewImageDiscussionPage"],
                       componentProps: {
-                        imagedisplay: this.display(imgdisplayinapp)
+                        imagedisplay: this.imgdisplayinapp,
+                        discussimgdisplayinapp: this.asgmtlist.asgmtDiscuss_Data
                       }
                     });
 
@@ -36711,65 +36709,210 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
+        key: "presentModalDiscussImage",
+        value: function presentModalDiscussImage(imgdisplayinapp) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            var modal;
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    _context5.next = 2;
+                    return this.modalController.create({
+                      component: _shared_module_session_view_image_discussion_session_view_image_discussion_page__WEBPACK_IMPORTED_MODULE_11__["SessionViewImageDiscussionPage"],
+                      componentProps: {
+                        imagedisplay: this.display(imgdisplayinapp)
+                      }
+                    });
+
+                  case 2:
+                    modal = _context5.sent;
+                    _context5.next = 5;
+                    return modal.present();
+
+                  case 5:
+                    return _context5.abrupt("return", _context5.sent);
+
+                  case 6:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5, this);
+          }));
+        }
+      }, {
         key: "createBarChart",
         value: function createBarChart() {
+          var _this5 = this;
+
           var ctx = this.barChart.nativeElement;
-          ctx.height = 500; // Student id, assignment id, assignment discussion id, bored dur, frus dur, duration
+          var jsonData = {
+            Authentication_Token: this.token,
+            Asgmt_Id: this.asgmtid[0],
+            // even tho asgmtDiscuss_Id needs to be specified, 
+            // the api will return data from all asgmtDiscuss_Ids. No need to iterate through
+            AsgmtDiscuss_Id: this.asgmtdiscusslist[0].asgmtDiscuss_Id
+          };
+          this.fetchChartData(jsonData).then(function (fetchData) {
+            var latestFirstData = fetchData.reverse();
+            var xAxisLabels = [];
+            var boredDurData = [];
+            var frusDurData = [];
+            var totalDurData = [];
 
-          var datasets = 10;
-          var student_id = 1;
-          var asgmt_id = 1;
-          var asgmt_disc_id = 1;
-          var bored_dur = 8;
-          var frus_dur = 12;
-          var total_dur = 30;
-          var xAxisLabels = [];
-          var boredDurData = [];
-          var frusDurData = [];
-          var totalDurData = [];
+            for (var i = 0; i < latestFirstData.length; i++) {
+              var entry = latestFirstData[i];
+              var tmp = entry.student_Username + ", " + entry.asgmtDiscuss_Id.substring(0, 6);
+              boredDurData.push(entry.boredomDuration);
+              frusDurData.push(entry.frustDuration);
+              totalDurData.push(entry.duration);
+              xAxisLabels.push(tmp);
+            } // Bar Chart creation
 
-          for (var i = 0; i < datasets; i++) {
-            var tmp = student_id + ", " + asgmt_id + ", " + asgmt_disc_id;
-            boredDurData.push(bored_dur);
-            frusDurData.push(frus_dur);
-            totalDurData.push(total_dur);
-            xAxisLabels.push(tmp);
-            bored_dur = bored_dur + 2;
-            frus_dur = frus_dur + 1;
-            total_dur = total_dur + 5;
-            student_id++;
-            asgmt_disc_id++;
-            asgmt_id++;
-          }
 
-          this.bars = new chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"](this.barChart.nativeElement, {
-            type: 'horizontalBar',
-            data: {
-              labels: xAxisLabels,
-              datasets: [{
-                label: "Boredom",
-                data: boredDurData,
-                backgroundColor: 'rgb(0, 85, 255)'
-              }, {
-                label: "Frustration",
-                data: frusDurData,
-                backgroundColor: 'rgb(255, 0, 0)'
-              }, {
-                label: "Total",
-                data: totalDurData,
-                backgroundColor: 'rgb(69, 69, 69)'
-              }]
-            },
-            options: {
-              scales: {
-                yAxes: [{
-                  ticks: {
-                    beginAtZero: true
-                  }
+            _this5.bars = new chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"](ctx, {
+              type: 'horizontalBar',
+              data: {
+                labels: xAxisLabels,
+                datasets: [{
+                  label: "Bored",
+                  data: boredDurData,
+                  backgroundColor: 'rgb(212, 168, 110)',
+                  hoverBackgroundColor: 'rgb(145, 113, 70)'
+                }, {
+                  label: "Frustrated",
+                  data: frusDurData,
+                  backgroundColor: 'rgb(255, 105, 105)',
+                  hoverBackgroundColor: 'rgb(173, 64, 64)'
+                }, {
+                  label: "Total",
+                  data: totalDurData,
+                  backgroundColor: 'rgb(47, 196, 50)',
+                  hoverBackgroundColor: 'rgb(35, 145, 37)'
                 }]
+              },
+              options: {
+                tooltips: {
+                  enabled: false,
+                  custom: function custom(tooltipModel) {
+                    // Tooltip Element
+                    var tooltipEl = document.getElementById('tapPopupInfo'); // Hide if no tooltip
+
+                    if (tooltipModel.opacity === 0) {
+                      tooltipEl.style.visibility = "hidden";
+
+                      if (document.getElementById("helpText") != null) {
+                        document.getElementById("helpText").style.display = "block";
+                        document.getElementById("helpText").style.visibility = "visible";
+                      }
+
+                      return;
+                    }
+
+                    function getBody(bodyItem) {
+                      return bodyItem.lines;
+                    } // Set Text
+
+
+                    if (tooltipModel.body) {
+                      var titleLines = tooltipModel.title || [];
+                      var studentName = titleLines[0].substring(0, titleLines[0].indexOf(","));
+                      var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length);
+                      var bodyLines = tooltipModel.body.map(getBody);
+                      var imgSrc; // getting img of asgmtDisc
+
+                      for (var i = 0; i < _this5.asgmtdiscusslist.length; i++) {
+                        var chartTitle = tooltipModel.title[0].substring(tooltipModel.title[0].indexOf(",") + 1, tooltipModel.title[0].length).trim();
+
+                        if (_this5.asgmtdiscusslist[i].asgmtDiscuss_Id.substring(0, 6) == chartTitle) {
+                          imgSrc = _this5.asgmtdiscusslist[i].asgmtDiscuss_Data;
+                        }
+                      }
+
+                      var innerHtml = '<ion-row id="helpText"><ion-col>Tap on the graph for more information!</ion-col></ion-row>';
+
+                      var sanitisedImg = _this5.dms.sanitize(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SecurityContext"].HTML, _this5.dms.bypassSecurityTrustHtml("data:image/png;base64, " + imgSrc));
+
+                      innerHtml += '<ion-row><ion-col size="6"><img src="' + sanitisedImg + '" alt="google" width="150" height="150"></img> </ion-col>';
+                      innerHtml += '<ion-col size="6"><table><tbody>';
+                      innerHtml += '<tr><td>Student: ' + studentName + '</td></tr>';
+                      innerHtml += '<tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr>';
+                      bodyLines.forEach(function (body, i) {
+                        var colors = tooltipModel.labelColors[i];
+                        var style = 'background:' + colors.backgroundColor;
+                        style += '; border-color:' + colors.borderColor;
+                        style += '; border-width: 2px' + ";display: inline-block;width: 10px;height: 10px;margin-right: 10px;";
+                        var span = '<span style="' + style + '"></span>';
+                        innerHtml += '<tr><td>' + span + body + '</td></tr>';
+                      });
+                      innerHtml += '</tbody></table></ion-col></ion-row>';
+                      tooltipEl.innerHTML = innerHtml;
+                    } // `this` will be the overall tooltip
+
+
+                    var position = ctx.getBoundingClientRect(); // Display, position, and set styles for font
+
+                    tooltipEl.style.visibility = "visible";
+                    tooltipEl.style.color = "black"; // tooltipEl.style.transition = "all 0.2s ease";
+
+                    document.getElementById("helpText").style.display = "none";
+                  }
+                },
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero: true
+                    }
+                  }]
+                },
+                maintainAspectRatio: false
               }
+            });
+
+            _this5.loading.dismiss();
+
+            document.getElementById("helpText").style.display = "block"; // Complicated looking but it's essentially just maintaining the bar sizes for every dataset to be consistent
+            // since they vary in length and will look weird if scaled normally.
+
+            var fiddleFactor = 1.05;
+            var ratio = xAxisLabels.length * fiddleFactor / 15;
+            var containerHeight = 1026;
+            var chartWrapper = document.getElementById("chartWrapper");
+            var height = 300;
+            var calcHeight = containerHeight * ratio;
+
+            if (calcHeight < height) {
+              calcHeight = height;
             }
+
+            chartWrapper.style.height = calcHeight + "px";
           });
+        }
+      }, {
+        key: "fetchChartData",
+        value: function fetchChartData(jsonData) {
+          var myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json"); // https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
+
+          var proxyUrl = "https://serene-shelf-84252.herokuapp.com/"; //proxy for CORS
+
+          var dbApiUrl = "https://slpidev.azurewebsites.net/api/analysis/viewAnalysisAsgmtDiscuss";
+          return fetch(proxyUrl + dbApiUrl, {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify(jsonData),
+            redirect: "follow"
+          }).then(function (resp) {
+            return resp.json();
+          }); // return Promise.all(jsonDataArray.map(jsonData =>
+          //   fetch(proxyUrl + dbApiUrl, {
+          //     method: 'POST',
+          //     headers: myHeaders,
+          //     body: JSON.stringify(jsonData),
+          //     redirect: 'follow'
+          //   }).then(resp => resp.json())
+          // ))
         }
       }]);
 
@@ -36788,6 +36931,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _session_my_session_my_page__WEBPACK_IMPORTED_MODULE_12__["SessionMyPage"]
       }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["LoadingController"]
+      }, {
         type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__["DomSanitizer"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
@@ -36805,6 +36950,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('barChart')], SessionAssignmentViewPage.prototype, "barChart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('cardChart')], SessionAssignmentViewPage.prototype, "cardChart", void 0);
     SessionAssignmentViewPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-session-assignment-view',
       template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(

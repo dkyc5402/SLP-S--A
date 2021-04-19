@@ -13,7 +13,8 @@ export class ParticipantStatus {
     public static PARTICIPANT_STATUS_REMOVED: string = "P6";//Tutor
     }
 export class apiurl{
-    public static apiUrl: string = 'https://slpidev.azurewebsites.net/api/';
+    public static apiUrl: string = 'https://fspslpuws.azurewebsites.net/api/';
+    //public static apiUrl: string = 'https://slpidev.azurewebsites.net/api/';
     }
 
 export class emptybackground{
