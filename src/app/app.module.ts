@@ -33,8 +33,11 @@ import {EmailComposer} from '@ionic-native/email-composer/ngx';
 import {DatePicker} from '@ionic-native/date-picker/ngx';
 import {DatePipe} from '@angular/common';
 
+//Header Popover
+import { HeaderpopComponent } from "./components/popovers/headerpop/headerpop.component";
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,ReactiveFormsModule,NgxIonicImageViewerModule,IonicStorageModule.forRoot() ],
   providers: [

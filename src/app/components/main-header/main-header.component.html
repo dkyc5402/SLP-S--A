@@ -1,9 +1,16 @@
-<!--For Wen Yi to add profile-->
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;margin-left: 8%;" (click)="OpenModal()"> Student Learning Platform</ion-title>
-    <ion-buttons slot="end">
+    <ion-title style="text-align: center;margin-left: 8%;"> Instructor (SLP) </ion-title>
+    <!--  (click)="OpenModal()" -->
+    <!-- <ion-buttons slot="end">
     <ion-icon style="zoom:3.0" src="assets/images/user-2.svg"></ion-icon>
-    </ion-buttons>
+    </ion-buttons> -->
+
+      <ion-button fill="clear" slot="end" (click)="presentPopover($event)">
+        <ion-icon id="dropdown" slot="icon-only" name="ellipsis-vertical" ></ion-icon>
+      </ion-button>
+
+    
+
   </ion-toolbar>
 </ion-header>

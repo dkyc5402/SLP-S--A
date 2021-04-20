@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ModalpopupPage} from '../../modalpopup/modalpopup.page';
-import {ModalController} from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
+import { HeaderpopComponent } from '../../components/popovers/headerpop/headerpop.component';
+
 
 @Component({
   selector: 'app-main-header',
@@ -9,7 +12,7 @@ import {ModalController} from '@ionic/angular';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor(private modalController:ModalController) { }
+  constructor(public popoverController: PopoverController,private modalController:ModalController) { }
 
   ngOnInit() {}
 
@@ -19,4 +22,21 @@ export class MainHeaderComponent implements OnInit {
     })
   }
 
+  async presentPopover(ev) {
+    const popover = await this.popoverController.create({
+      component: HeaderpopComponent,
+      cssClass: "HeaderPopover",
+      event: ev,
+      translucent: true,
+      showBackdrop: false,
+      backdropDismiss: true,
+      
+    });
+    await popover.present();
+
+    const { role } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
 }
+
+

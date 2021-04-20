@@ -791,7 +791,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _classCallCheck(this, apiurl);
     };
 
-    apiurl.apiUrl = 'https://slpidev.azurewebsites.net/api/';
+    apiurl.apiUrl = 'https://fspslpuws.azurewebsites.net/api/';
 
     var emptybackground = function emptybackground() {
       _classCallCheck(this, emptybackground);
