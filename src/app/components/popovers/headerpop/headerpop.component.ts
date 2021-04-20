@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from "@ionic/angular";
+import { Router } from '@angular/router';
+import { ModalController, PopoverController } from "@ionic/angular";
+import { ModalpopupPage } from '../../../modalpopup/modalpopup.page';
 
 @Component({
   selector: 'app-headerpop',
@@ -9,7 +11,9 @@ import { PopoverController } from "@ionic/angular";
 export class HeaderpopComponent implements OnInit {
 
   constructor(
-    private popover: PopoverController
+    private popover: PopoverController,
+    private router: Router,
+    private modalController: ModalController
   ) { }
  
 
@@ -17,6 +21,16 @@ export class HeaderpopComponent implements OnInit {
 
   ClosePopover() {
     this.popover.dismiss();
+  }
+
+  Help() {
+    this.router.navigateByUrl('tabs/support/logout');
+  }
+
+  OpenModal() {
+    this.modalController.create({ component: ModalpopupPage }).then((modalElement) => {
+      modalElement.present();
+    })
   }
 }
 
