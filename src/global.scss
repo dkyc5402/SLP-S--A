@@ -71,9 +71,9 @@
 // Header popover
 
     .HeaderPopover{
-        box-shadow: transparent;
-        max-height: 550px;
-        max-width: 250px;
+        --backdrop-opacity: 0%;
+        --height: auto !important;
+        --max-width: 180px;
     }
 
-   
+    

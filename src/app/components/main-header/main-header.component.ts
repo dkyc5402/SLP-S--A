@@ -30,6 +30,7 @@ export class MainHeaderComponent implements OnInit {
       translucent: true,
       showBackdrop: false,
       backdropDismiss: true,
+      mode:"md",
       
     });
     await popover.present();
