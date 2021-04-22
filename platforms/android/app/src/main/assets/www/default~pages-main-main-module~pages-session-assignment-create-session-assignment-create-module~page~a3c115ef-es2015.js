@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- <ion-popover-view slot=\"end\">\r\n  <ion-content>\r\n    <div class=\"list\">\r\n      <a class=\"item\" (click)=\"OpenModal()\">\r\n        View Account\r\n      </a>\r\n      <a class=\"item\" (click)=\"Help()\">\r\n        Help\r\n      </a>\r\n      <a class=\"item\" (click)=\"presentAlertLogout()\">\r\n        Logout\r\n      </a>\r\n    </div>\r\n  </ion-content>\r\n</ion-popover-view> -->\r\n\r\n<ion-popover-view class=\"fit\">\r\n\r\n<ion-list lines=\"full\" style=\"text-align: center; height: auto;\">\r\n  <ion-item button (click)=\"OpenModal()\">View Account</ion-item>\r\n  <ion-item button (click)=\"Help()\">Help</ion-item>\r\n  <ion-item button>Logout</ion-item>\r\n</ion-list>\r\n\r\n</ion-popover-view>\r\n\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <ion-popover-view slot=\"end\">\r\n  <ion-content>\r\n    <div class=\"list\">\r\n      <a class=\"item\" (click)=\"OpenModal()\">\r\n        View Account\r\n      </a>\r\n      <a class=\"item\" (click)=\"Help()\">\r\n        Help\r\n      </a>\r\n      <a class=\"item\" (click)=\"presentAlertLogout()\">\r\n        Logout\r\n      </a>\r\n    </div>\r\n  </ion-content>\r\n</ion-popover-view> -->\r\n\r\n<ion-popover-view class=\"fit\">\r\n\r\n<ion-list lines=\"full\" style=\"text-align: center; height: auto;\">\r\n  <ion-item button (click)=\"OpenModal()\">View Account</ion-item>\r\n  <ion-item button (click)=\"Help()\">Help</ion-item>\r\n  <ion-item button (click)=\"Logout()\">Logout</ion-item>\r\n</ion-list>\r\n\r\n</ion-popover-view>\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -198,20 +198,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../modalpopup/modalpopup.page */ "./src/app/modalpopup/modalpopup.page.ts");
+/* harmony import */ var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/http/ngx */ "./node_modules/@ionic-native/http/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_services_assignments_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/assignments.service */ "./src/app/services/assignments.service.ts");
+/* harmony import */ var src_app_services_global_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/global.service */ "./src/app/services/global.service.ts");
+/* harmony import */ var _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../modalpopup/modalpopup.page */ "./src/app/modalpopup/modalpopup.page.ts");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
+/* harmony import */ var src_app_model_global_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/model/global-api */ "./src/app/model/global-api.ts");
+
+
+
+
+
 
 
 
 
 
 let HeaderpopComponent = class HeaderpopComponent {
-    constructor(popover, router, modalController) {
+    constructor(popover, router, modalController, storage, assignmentsService, nativeHttp, globalService, alertController) {
         this.popover = popover;
         this.router = router;
         this.modalController = modalController;
+        this.storage = storage;
+        this.assignmentsService = assignmentsService;
+        this.nativeHttp = nativeHttp;
+        this.globalService = globalService;
+        this.alertController = alertController;
     }
-    ngOnInit() { }
+    ngOnInit() {
+    }
     ClosePopover() {
         this.popover.dismiss();
     }
@@ -219,15 +235,77 @@ let HeaderpopComponent = class HeaderpopComponent {
         this.router.navigateByUrl('tabs/support/logout');
     }
     OpenModal() {
-        this.modalController.create({ component: _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_4__["ModalpopupPage"] }).then((modalElement) => {
+        this.modalController.create({ component: _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_7__["ModalpopupPage"] }).then((modalElement) => {
             modalElement.present();
+        });
+    }
+    Logout() {
+        this.token = this.globalService.getselectedtoken();
+        this.studentid = this.globalService.getselectedStudentId();
+        console.log(this.studentid);
+        console.log(this.token);
+        this.nativeHttp.setDataSerializer('json');
+        this.nativeHttp.post(src_app_model_global_api__WEBPACK_IMPORTED_MODULE_9__["apiurl"].apiUrl + 'student/logout', {
+            "Authentication_Token": this.token,
+            "User_Id": this.studentid
+        }, {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        })
+            .then((response) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                this.ClosePopover();
+                const alert = yield this.alertController.create({
+                    header: 'Logout',
+                    // subHeader: 'Sub Alert',
+                    message: 'Are you sure you want to logout?',
+                    buttons: [{
+                            text: 'Cancel',
+                            role: 'cancel',
+                            handler: () => {
+                                console.log('You clicked me');
+                            }
+                        },
+                        {
+                            text: 'Okay',
+                            cssClass: 'secondary',
+                            handler: () => {
+                                //  console.log('Second Handler');
+                                this.storage.remove('mysession');
+                                this.storage.remove('assignmentdetails');
+                                this.storage.remove('authlogin');
+                                this.storage.remove('joinsession');
+                                this.storage.remove('chatdetails');
+                                this.storage.remove('User_Id');
+                                this.storage.remove('Authentication_Token');
+                                this.router.navigateByUrl('/login');
+                            }
+                        }]
+                });
+                yield alert.present();
+            }
+            catch (e) {
+                console.error(e);
+            }
+        }))
+            .catch(response => {
+            // prints 403
+            console.log(response.status);
+            // prints Permission denied
+            console.log(response.error);
+            this.assignmentsService.presentError();
         });
     }
 };
 HeaderpopComponent.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["PopoverController"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ModalController"] },
+    { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_8__["Storage"] },
+    { type: src_app_services_assignments_service__WEBPACK_IMPORTED_MODULE_5__["AssignmentsService"] },
+    { type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_3__["HTTP"] },
+    { type: src_app_services_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"] }
 ];
 HeaderpopComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

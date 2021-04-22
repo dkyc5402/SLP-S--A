@@ -41,7 +41,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<!-- <ion-popover-view slot=\"end\">\r\n  <ion-content>\r\n    <div class=\"list\">\r\n      <a class=\"item\" (click)=\"OpenModal()\">\r\n        View Account\r\n      </a>\r\n      <a class=\"item\" (click)=\"Help()\">\r\n        Help\r\n      </a>\r\n      <a class=\"item\" (click)=\"presentAlertLogout()\">\r\n        Logout\r\n      </a>\r\n    </div>\r\n  </ion-content>\r\n</ion-popover-view> -->\r\n\r\n<ion-popover-view class=\"fit\">\r\n\r\n<ion-list lines=\"full\" style=\"text-align: center; height: auto;\">\r\n  <ion-item button (click)=\"OpenModal()\">View Account</ion-item>\r\n  <ion-item button (click)=\"Help()\">Help</ion-item>\r\n  <ion-item button>Logout</ion-item>\r\n</ion-list>\r\n\r\n</ion-popover-view>\r\n\r\n\r\n";
+    __webpack_exports__["default"] = "<!-- <ion-popover-view slot=\"end\">\r\n  <ion-content>\r\n    <div class=\"list\">\r\n      <a class=\"item\" (click)=\"OpenModal()\">\r\n        View Account\r\n      </a>\r\n      <a class=\"item\" (click)=\"Help()\">\r\n        Help\r\n      </a>\r\n      <a class=\"item\" (click)=\"presentAlertLogout()\">\r\n        Logout\r\n      </a>\r\n    </div>\r\n  </ion-content>\r\n</ion-popover-view> -->\r\n\r\n<ion-popover-view class=\"fit\">\r\n\r\n<ion-list lines=\"full\" style=\"text-align: center; height: auto;\">\r\n  <ion-item button (click)=\"OpenModal()\">View Account</ion-item>\r\n  <ion-item button (click)=\"Help()\">Help</ion-item>\r\n  <ion-item button (click)=\"Logout()\">Logout</ion-item>\r\n</ion-list>\r\n\r\n</ion-popover-view>\r\n\r\n\r\n";
     /***/
   },
 
@@ -377,23 +377,58 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic-native/http/ngx */
+    "./node_modules/@ionic-native/http/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
-    var _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var src_app_services_assignments_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/services/assignments.service */
+    "./src/app/services/assignments.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_global_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! src/app/services/global.service */
+    "./src/app/services/global.service.ts");
+    /* harmony import */
+
+
+    var _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../../../modalpopup/modalpopup.page */
     "./src/app/modalpopup/modalpopup.page.ts");
+    /* harmony import */
+
+
+    var _ionic_storage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! @ionic/storage */
+    "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
+    /* harmony import */
+
+
+    var src_app_model_global_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! src/app/model/global-api */
+    "./src/app/model/global-api.ts");
 
     var HeaderpopComponent = /*#__PURE__*/function () {
-      function HeaderpopComponent(popover, router, modalController) {
+      function HeaderpopComponent(popover, router, modalController, storage, assignmentsService, nativeHttp, globalService, alertController) {
         _classCallCheck(this, HeaderpopComponent);
 
         this.popover = popover;
         this.router = router;
         this.modalController = modalController;
+        this.storage = storage;
+        this.assignmentsService = assignmentsService;
+        this.nativeHttp = nativeHttp;
+        this.globalService = globalService;
+        this.alertController = alertController;
       }
 
       _createClass(HeaderpopComponent, [{
@@ -413,9 +448,101 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "OpenModal",
         value: function OpenModal() {
           this.modalController.create({
-            component: _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_4__["ModalpopupPage"]
+            component: _modalpopup_modalpopup_page__WEBPACK_IMPORTED_MODULE_7__["ModalpopupPage"]
           }).then(function (modalElement) {
             modalElement.present();
+          });
+        }
+      }, {
+        key: "Logout",
+        value: function Logout() {
+          var _this = this;
+
+          this.token = this.globalService.getselectedtoken();
+          this.studentid = this.globalService.getselectedStudentId();
+          console.log(this.studentid);
+          console.log(this.token);
+          this.nativeHttp.setDataSerializer('json');
+          this.nativeHttp.post(src_app_model_global_api__WEBPACK_IMPORTED_MODULE_9__["apiurl"].apiUrl + 'student/logout', {
+            "Authentication_Token": this.token,
+            "User_Id": this.studentid
+          }, {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }).then(function (response) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var _this2 = this;
+
+              var alert;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      _context2.prev = 0;
+                      this.ClosePopover();
+                      _context2.next = 4;
+                      return this.alertController.create({
+                        header: 'Logout',
+                        // subHeader: 'Sub Alert',
+                        message: 'Are you sure you want to logout?',
+                        buttons: [{
+                          text: 'Cancel',
+                          role: 'cancel',
+                          handler: function handler() {
+                            console.log('You clicked me');
+                          }
+                        }, {
+                          text: 'Okay',
+                          cssClass: 'secondary',
+                          handler: function handler() {
+                            //  console.log('Second Handler');
+                            _this2.storage.remove('mysession');
+
+                            _this2.storage.remove('assignmentdetails');
+
+                            _this2.storage.remove('authlogin');
+
+                            _this2.storage.remove('joinsession');
+
+                            _this2.storage.remove('chatdetails');
+
+                            _this2.storage.remove('User_Id');
+
+                            _this2.storage.remove('Authentication_Token');
+
+                            _this2.router.navigateByUrl('/login');
+                          }
+                        }]
+                      });
+
+                    case 4:
+                      alert = _context2.sent;
+                      _context2.next = 7;
+                      return alert.present();
+
+                    case 7:
+                      _context2.next = 12;
+                      break;
+
+                    case 9:
+                      _context2.prev = 9;
+                      _context2.t0 = _context2["catch"](0);
+                      console.error(_context2.t0);
+
+                    case 12:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this, [[0, 9]]);
+            }));
+          })["catch"](function (response) {
+            // prints 403
+            console.log(response.status); // prints Permission denied
+
+            console.log(response.error);
+
+            _this.assignmentsService.presentError();
           });
         }
       }]);
@@ -425,11 +552,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     HeaderpopComponent.ctorParameters = function () {
       return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["PopoverController"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ModalController"]
+      }, {
+        type: _ionic_storage__WEBPACK_IMPORTED_MODULE_8__["Storage"]
+      }, {
+        type: src_app_services_assignments_service__WEBPACK_IMPORTED_MODULE_5__["AssignmentsService"]
+      }, {
+        type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_3__["HTTP"]
+      }, {
+        type: src_app_services_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]
       }];
     };
 
@@ -577,7 +714,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getSessionHeaderData",
         value: function getSessionHeaderData() {
-          var _this = this;
+          var _this3 = this;
 
           // Get the ID that was passed with the URL
           var id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -585,24 +722,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.assignmentsService.setselectedsessionid(id);
           this.storage.get('mysession').then(function (val) {
-            _this.sessionheaderdata = val;
+            _this3.sessionheaderdata = val;
 
-            _this.assignmentsService.getselectedparticipantid();
+            _this3.assignmentsService.getselectedparticipantid();
 
-            _this.assignmentsService.setselectedsessionheader(_this.sessionheaderdata);
+            _this3.assignmentsService.setselectedsessionheader(_this3.sessionheaderdata);
 
             try {
               val.forEach(function (valor) {
-                if (valor.session_Id == _this.assignmentsService.getselectedsessionid()) {
-                  _this.sessionheaderdata = valor;
-                  _this.initiatorid = valor.initiator_Id;
+                if (valor.session_Id == _this3.assignmentsService.getselectedsessionid()) {
+                  _this3.sessionheaderdata = valor;
+                  _this3.initiatorid = valor.initiator_Id;
 
-                  _this.assignmentsService.setselectedinitiatorid(_this.initiatorid); //console.log(this.initiatorid)
+                  _this3.assignmentsService.setselectedinitiatorid(_this3.initiatorid); //console.log(this.initiatorid)
 
 
-                  _this.assignmentsService.setselectedsessionheader(_this.sessionheaderdata);
+                  _this3.assignmentsService.setselectedsessionheader(_this3.sessionheaderdata);
 
-                  _this.assignmentsService.setselectedsessionstatus(valor.session_Status);
+                  _this3.assignmentsService.setselectedsessionstatus(valor.session_Status);
 
                   console.log("Found Session Header!");
                 }
@@ -617,7 +754,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "EndSession",
         value: function EndSession() {
-          var _this2 = this;
+          var _this4 = this;
 
           if (this.networkService.online == false) {
             this.networkService.presentNetworkMsg();
@@ -625,9 +762,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.assignmentsService.EndSessionConfirmation('Cancel', 'End').then(function (res) {
               if (res === 'End') {
                 //POST Method
-                _this2.LeaveSession();
+                _this4.LeaveSession();
 
-                _this2.router.navigateByUrl('tabs/main');
+                _this4.router.navigateByUrl('tabs/main');
               }
             });
           }
@@ -637,7 +774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "LeaveSession",
         value: function LeaveSession() {
-          var _this3 = this;
+          var _this5 = this;
 
           console.log(this.assignmentsService.getselectedparticipantid());
           this.nativeHttp.setDataSerializer('json');
@@ -652,11 +789,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }).then(function (response) {
             try {
               response.data = JSON.parse(response.data);
-              _this3.sessionheaderdata = response.data;
+              _this5.sessionheaderdata = response.data;
 
-              _this3.storage.set('mysession', response.data);
+              _this5.storage.set('mysession', response.data);
 
-              _this3.storage.set('assignmentdetails', response.data.assignments); // console.log(response.data)
+              _this5.storage.set('assignmentdetails', response.data.assignments); // console.log(response.data)
 
             } catch (e) {
               console.error('JSON parsing error');
@@ -673,42 +810,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "presentPopover",
         value: function presentPopover(ev) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
             var popover;
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
-                switch (_context2.prev = _context2.next) {
+                switch (_context3.prev = _context3.next) {
                   case 0:
                     if (!(this.networkService.online == false)) {
-                      _context2.next = 4;
+                      _context3.next = 4;
                       break;
                     }
 
                     this.networkService.presentNetworkMsg();
-                    _context2.next = 10;
+                    _context3.next = 10;
                     break;
 
                   case 4:
-                    _context2.next = 6;
+                    _context3.next = 6;
                     return this.popoverController.create({
                       component: _pages_shared_module_popover_participant_view_popover_participant_view_page__WEBPACK_IMPORTED_MODULE_6__["PopoverParticipantViewPage"],
                       event: ev
                     });
 
                   case 6:
-                    popover = _context2.sent;
-                    _context2.next = 9;
+                    popover = _context3.sent;
+                    _context3.next = 9;
                     return popover.present();
 
                   case 9:
-                    return _context2.abrupt("return", _context2.sent);
+                    return _context3.abrupt("return", _context3.sent);
 
                   case 10:
                   case "end":
-                    return _context2.stop();
+                    return _context3.stop();
                 }
               }
-            }, _callee2, this);
+            }, _callee3, this);
           }));
         }
       }]);
@@ -834,14 +971,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "profile",
         value: function profile() {
-          var _this4 = this;
+          var _this6 = this;
 
           this.storage.get('authlogin').then(function (val) {
             console.log(val);
-            _this4.displayUserData = val;
-            _this4.username = val.username;
-            _this4.levelInfo_DisplayName = val.levelInfo_DisplayName;
-            _this4.schoolInfo_Name = val.schoolInfo_Name;
+            _this6.displayUserData = val;
+            _this6.username = val.username;
+            _this6.levelInfo_DisplayName = val.levelInfo_DisplayName;
+            _this6.schoolInfo_Name = val.schoolInfo_Name;
           });
         }
       }]);
