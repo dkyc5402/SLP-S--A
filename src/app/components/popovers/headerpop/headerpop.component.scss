@@ -2,3 +2,16 @@ ion-item {
     text-align: center;
     border-color: transparent;
 }
+
+
+ion-popover-view.fit {
+  --height: auto !important;
+}
+
+ion-popover-view.fit ion-content {
+  position: relative !important;
+}
+
+.platform-android ion-popover-view.fit {
+  margin-top: 10px !important;
+}
