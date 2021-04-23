@@ -347,11 +347,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     case 0:
                       _context.prev = 0;
                       response.data = JSON.parse(response.data);
-                      console.log(response.data);
                       this.storage.set('authlogin', response.data);
                       this.postData.Username = '';
                       this.postData.Password = '';
-                      _context.next = 8;
+                      _context.next = 7;
                       return this.alertController.create({
                         header: 'Sign In',
                         // subHeader: 'Sub Alert',
@@ -367,28 +366,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }]
                       });
 
-                    case 8:
+                    case 7:
                       alert = _context.sent;
-                      _context.next = 11;
+                      _context.next = 10;
                       return alert.present();
 
-                    case 11:
-                      _context.next = 18;
+                    case 10:
+                      _context.next = 17;
                       break;
 
-                    case 13:
-                      _context.prev = 13;
+                    case 12:
+                      _context.prev = 12;
                       _context.t0 = _context["catch"](0);
                       console.error(_context.t0);
                       console.log("Not a valid account! Wrong details entered!");
                       this.toastService.presentToast('Please enter correct details!');
 
-                    case 18:
+                    case 17:
                     case "end":
                       return _context.stop();
                   }
                 }
-              }, _callee, this, [[0, 13]]);
+              }, _callee, this, [[0, 12]]);
             }));
           })["catch"](function (response) {
             // prints 403
