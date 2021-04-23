@@ -15,14 +15,16 @@ ion-label {
 
 .card {
   margin: 0 auto;
+  border: none;
+  box-shadow: none;
+  padding:10px;
 
   .header {
-      height: 250px;
-      
+      height: 290px;
 
       .avatar {
-          width: 160px;
-          height: 160px;
+          width: 270px;
+          height: 270px;
           position: relative;
           margin: 0 auto;
 
@@ -30,8 +32,8 @@ ion-label {
               display: block;
               border-radius: 50%;
               position: absolute;
-              bottom: calc(-1*(80px + 4px));
-              border: 8px solid #9Dc912;
+              top: 5px;
+              border: 8px solid #4B5C7C;
               background-color: #fff;
           }
       }
@@ -40,12 +42,12 @@ ion-label {
 
 .card-body {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 10px;
   height: calc(100vh - (200px + 56px));
   overflow: hidden;
 
   .user-meta {
-      padding-top: 40px;
+      //padding-top: 40px;
 
       .playername {
           font-size: 24px;
@@ -53,11 +55,12 @@ ion-label {
           color: #303940;
       }
 
-      .country {
-          font-size: 90%;
-          color: #949ea6;
-          text-transform: uppercase;
-          margin: 0 auto;
-      }
+     
   }
+}
+
+ion-button{
+  white-space: normal;
+  --box-shadow:none;
+  --color-activated:#f8f8f8;
 }

@@ -33,6 +33,7 @@ this.profile();
       this.username = val.username
       this.levelInfo_DisplayName = val.levelInfo_DisplayName
       this.schoolInfo_Name = val.schoolInfo_Name
+
       });
   }
   

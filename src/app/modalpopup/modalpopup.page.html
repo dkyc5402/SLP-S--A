@@ -1,29 +1,87 @@
-  <ion-content fullscreen="true" slot="fixed" padding class="background">
-    <ion-item >
-      <ion-label >PROFILE</ion-label>
-      <ion-button size="small" (click)="CloseModal()" slot="end" style="--background:#20a7c2">close</ion-button>
-    </ion-item>
-    
-    <div class="card">
-      <div class="header">
-        <div class="avatar">
-          <img src="/assets/images/person.png" >
-        </div> 
-      </div>
-    </div>
-  
+<ion-content fullscreen="true" scroll-y="false" slot="fixed" padding class="background">
+  <ion-item lines="none">
+    <ion-label>PROFILE</ion-label>
+    <ion-button size="small" (click)="CloseModal()" slot="end" style="--background:#4B5C7C;color: white;">close
+    </ion-button>
+  </ion-item>
 
-    <div class="card-body">
-      <div class="user-meta ion-text-center">
-        <h3 class="playername">{{ username }}</h3>
-        <!-- <h5 class="country">Switzerland</h5> -->
-        <!-- <h6 class="ranking">Current ranking: <ion-chip>
-          <ion-label>2</ion-label>
-          </ion-chip>
-        </h6> -->
-        <br>
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="/assets/images/person.png">
       </div>
-      <ion-button expand="full" color="#4B5C7C;" (click)="profile()">{{ schoolInfo_Name }}</ion-button>
-      <!-- <ion-button expand="full" color="secondary">{{ levelInfo_DisplayName }}</ion-button> -->
     </div>
-  </ion-content>
+  </div>
+
+
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="playername">{{ username }}</h3>
+      <h2 style="text-align: center;"> Instructor </h2>
+      <h4 style="text-align: center;">
+        <ion-icon name="school-outline"></ion-icon> {{ schoolInfo_Name }}
+      </h4>
+    </div>
+    <hr>
+    <ion-button expand="full"  style="--background:#4B5C7C;color: white;">Reset Password</ion-button> 
+
+
+    <!-- <button class="accordion" (click)='ionViewDidLoad()'>
+      Reset Password
+    </button>
+
+    <div style="margin: 5px 90px" class="panel">
+      <br>
+      <form class="container" [formGroup]="loginForm1">
+        <div class="form-group">
+          <ion-label position="stacked">New Password <span style="color: red">*</span></ion-label>
+          <div class="form">
+            <input autocomplete="off" name="password" class="form-control" formControlName="password"
+              [type]="showPassword4 ? 'text': 'password'">
+            <ion-icon slot="end" [name]="passwordToggleIcon4" (click)="togglePassword4()"></ion-icon>
+          </div>
+        </div>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-message"
+              *ngIf="loginForm1.get('password').hasError(error.type) && (loginForm1.get('password').dirty || loginForm1.get('password').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <br>
+        <div class="form-group">
+          <ion-label position="stacked">Confirm New Password <span style="color: red">*</span></ion-label>
+          <div class="form">
+            <input autocomplete="off" name="confirmpassword" class="form-control" formControlName="confirmpassword"
+              [type]="showPassword5 ? 'text': 'password'" />
+            <ion-icon slot="end" [name]="passwordToggleIcon5" (click)="togglePassword5()"></ion-icon>
+          </div>
+        </div>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.confirmpassword">
+            <div class="error-message"
+              *ngIf="loginForm1.get('confirmpassword').hasError(error.type) && (loginForm1.get('confirmpassword').dirty || loginForm1.get('confirmpassword').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+          <div class="error-message"
+            *ngIf="!loginForm1.get('confirmpassword').errors && loginForm1.hasError('passwordNotMatch') && (loginForm1.get('confirmpassword').dirty || loginForm1.get('confirmpassword').touched)">
+            Password and Confirm Password fields should match
+          </div>
+        </div>
+        <br>
+        <div class="ionbutton">
+          <ion-button class="form-control btn btn-primary" [disabled]="!loginForm1.valid" share="round"
+            (click)="presentAlert()">Confirm</ion-button>
+        </div>
+        <br><br><br><br><br>
+      </form>
+    </div> -->
+
+
+    <!-- <ion-button expand="full" color="#4B5C7C;" (click)="profile()">{{ schoolInfo_Name }}</ion-button> -->
+    <!-- <ion-button expand="full" color="secondary">{{ levelInfo_DisplayName }}</ion-button> -->
+  </div>
+</ion-content>

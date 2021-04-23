@@ -203,6 +203,7 @@ let LoginPage = class LoginPage {
             .then((response) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
                 response.data = JSON.parse(response.data);
+                console.log(response.data);
                 this.storage.set('authlogin', response.data);
                 this.postData.Username = '';
                 this.postData.Password = '';
