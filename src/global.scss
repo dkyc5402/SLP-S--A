@@ -74,6 +74,10 @@
         --backdrop-opacity: 0%;
         --height: auto !important;
         --max-width: 180px;
+
+        .popover-content.sc-ion-popover-md{
+            min-height: auto;
+        }
     }
 
 
