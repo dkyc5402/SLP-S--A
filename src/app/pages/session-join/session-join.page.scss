@@ -1,3 +1,7 @@
+.fourthcontent{
+  padding: 5% 2% 1% 2%;
+}
+
 .accordion-list {
     padding: 0 1% 0 1%;
     margin-bottom: 0.5em;
@@ -7,20 +11,22 @@
     }
 }
   .section{
-    --ion-item-background:#d9f6ff;
+    --ion-item-background:#8091B3;
   }
   .section-active{
-   --ion-item-background:#d9f6ff;
+   --ion-item-background:#8091B3;
   }
   .buttonjoinsession{
-    font-size: large;
-    color:#e5741f;
-    background-color: transparent;
+     font-size:medium;
     position: absolute;
-    top:0;
+    padding: 6px;
+    margin-top: 30px;
+    background-color: #4B5C7C;
+    border-radius: 10px;
+    color: white;
   }
   .defaultgreenfont{
-    color:#1c91a8;
+    color:black;
   }
  
   
