@@ -311,7 +311,7 @@ let SessionJoinPage = class SessionJoinPage {
             // Prepare a loading controller
             this.loading = yield this.loadingController.create({
                 message: 'Please Wait',
-                cssClass: 'custom-class custom-loading',
+                cssClass: 'custom-loading',
                 duration: 60000,
                 backdropDismiss: false
             });

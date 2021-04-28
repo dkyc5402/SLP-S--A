@@ -557,7 +557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context4.next = 2;
                     return this.loadingController.create({
                       message: 'Please Wait',
-                      cssClass: 'custom-class custom-loading',
+                      cssClass: 'custom-loading',
                       duration: 60000,
                       backdropDismiss: false
                     });
