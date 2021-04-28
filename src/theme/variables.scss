@@ -25,23 +25,23 @@
     padding:1em;
   }
     .activesegment{
-      background-color: #1c91a8;
-      color:#ffffff;
+      background-color: #4B5C7C;
+      color:white;
     }
     .inactivesegment{
-      background-color: #eef9fc;
-      color:#1c91a8;
+      background-color: white;
+      color:#4B5C7C;
     }
   #breadcrumbs{
     padding:1em;
-    color:#1c91a8; 
+    color:#4B5C7C; 
     font-size: large;
   }
   ion-segment-button {
     height: 1em;
     min-height: 2em;
-      color:#1c91a8;
-       border: #1c91a8 solid 0.1em;
+      color:#4B5C7C;
+       border: #4B5C7C solid 0.1em;
        --indicator-color: transparent !important;
        --indicator-color-checked: transparent !important;
      }

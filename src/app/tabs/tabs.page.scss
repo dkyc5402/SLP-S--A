@@ -1,13 +1,15 @@
 .tab-selected {
-    background-color: #146778;
-    color: #fdf9f2;
+    background-color: #4B5C7C;
+    color: #DBD3D8;
+    --ripple-color: black;
 }
 
 ion-tab-button:not(.tab-selected) {
-  background-color: #33404d;
-  color:#a5988f;
+  background-color: #8C9CBA;
+  color:#4B5C7C;
 }
 
 ion-tab-bar {
-    --border: none;
+    border-width: medium;
+    border-color: white
 }
