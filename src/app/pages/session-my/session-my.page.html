@@ -11,7 +11,7 @@
     <div *ngIf="boolHaveSession" style="font-size: larger;"><b>{{NoSessionText}}</b></div>
     <!--Session Not Yet Accepted By Tutor-->
     <ion-list  *ngFor="let item of textdisplay; let i = index" class="accordion-list" lines="none" detail="false" >
-      <ion-grid tappable *ngIf="item.session_Status==this.sessionstatuspending" style="background-color: #F9C7C8;" [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <ion-grid tappable *ngIf="item.session_Status==this.sessionstatuspending" style="background-color: #F9C7C8; border-radius: 15px;" [ngClass]="{'section-active': item.open, 'section': !item.open}">
         <ion-row>
           <ion-col size="9">
               <b class="defaultgreenfont" style="font-size: large;">{{item.session_Title}}<br/></b>
@@ -33,7 +33,7 @@
       </ion-row>
     </ion-grid>
     <!--Session Accepted By Tutor--><!--sessionstatusaccepted-->
-      <ion-grid tappable *ngIf="item.session_Status==this.sessionstatusaccepted" style="background-color: #99A7C2;" [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <ion-grid tappable *ngIf="item.session_Status==this.sessionstatusaccepted" style="background-color: #99A7C2;border-radius: 15px;" [ngClass]="{'section-active': item.open, 'section': !item.open}">
         <ion-row>
           <ion-col size="9">
               <b class="defaultgreenfont" style="font-size: large;">{{item.session_Title}}<br/></b>
@@ -55,7 +55,7 @@
      </div> 
       </ion-row>
     </ion-grid>
-    <ion-grid *ngIf="item.session_Status==this.sessionstatusended" tappable style="background-color: #b2b2b2;" [ngClass]="{'sectionEnd-active': item.open, 'sectionEnd': !item.open}">
+    <ion-grid *ngIf="item.session_Status==this.sessionstatusended" tappable style="background-color: #b2b2b2;border-radius: 15px;" [ngClass]="{'sectionEnd-active': item.open, 'sectionEnd': !item.open}">
       <ion-row>
         <ion-col size="10" style="color: #808080;" >       
          <b style="font-size: large;">{{item.session_Title}}<br/></b>
