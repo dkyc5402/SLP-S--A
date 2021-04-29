@@ -4,16 +4,19 @@
     <ion-grid class="center">
 
       <!--Welcome Card-->
+
+
       <ion-row>
-        <ion-card color="light" id="welcome_card">
+        <ion-card style=" border-radius: 10px; box-shadow: 0 3px 3px #99a7c2; width: 315px;" id="welcome_card">
           <ion-card-content>
             <ion-row>
               <ion-col size="9">
                 <ion-row>
-                  <ion-label id="welcome_name" style="font-weight:bold; font-size: 20px;">Welcome Mr ~</ion-label>
+                  <ion-label id="welcome_name" style="font-weight:bold; font-size: 20px;">Welcome ~</ion-label>
                 </ion-row>
                 <ion-row>
-                  <ion-label id="instructor_school" style="font-size: 16px;">Instructor in sch</ion-label>
+                  <ion-label id="instructor_school" style="font-size: 16px; word-wrap: break-word;">Instructor in ~
+                  </ion-label>
                 </ion-row>
               </ion-col>
 
@@ -22,9 +25,7 @@
                   style="border-radius: 20px;" />
               </ion-col>
             </ion-row>
-
           </ion-card-content>
-
         </ion-card>
       </ion-row>
 
@@ -33,27 +34,31 @@
         <ion-col>
 
 
-          <ion-card  (click)="MySession()">
-            <ion-header style="background-color: #4B5C7C;">
-              <ion-title style="color: white; padding: 10px;font-size: 12px;">My Sessions</ion-title>
+          <ion-card (click)="MySession()" style="background-color: #DCD4D1; border-radius: 20px;" >
+            <img src="../../../assets/icon/003-knowledge.svg" alt="Tutor Session" height="120px" style="padding:10px;"/>
+            <ion-header>
+              <ion-title style="color: #654C4F; padding-bottom: 10px;font-size: 13px;">My Sessions</ion-title>
             </ion-header>
-            <img src="assets/images/assignment.png" alt="My Sessions" style="height: 140px;">
+            
           </ion-card>
 
         </ion-col>
         <ion-col>
 
-          <ion-card  (click)="JoinSession()">
-            <ion-header style="background-color: #4B5C7C;">
-              <ion-title style="color: white;padding: 10px;font-size: 12px;">Tutor Session</ion-title>
+          <ion-card (click)="JoinSession()"  style="background-color: #D2DAD5; border-radius: 20px;">
+            <img src="../../../assets/icon/004-education.svg" alt="Tutor Session" height="120px" style="padding:10px;"/>
+            <ion-header>
+              <ion-title style="color: #657B6C;padding-bottom: 10px;font-size: 13px;">Tutor Session</ion-title>
             </ion-header>
-            <img src="assets/images/html.png" alt="Tutor Session " style="height: 140px; padding:10px;font-size: 10px;">
           </ion-card>
         </ion-col>
       </ion-row>
 
+
     </ion-grid>
+
   </div>
+
 </ion-content>
 
 <!-- <div>
@@ -67,10 +72,6 @@
                 alt="My Session"><br /></button><span></span>
             <div style="font-size: large;">My Sessions</div>
           </div> -->
-
-
-
-
 
 <!--<ion-row>
        <ion-col>
