@@ -3,7 +3,7 @@
   }
   .scrolling-wrapper {
     overflow-x: scroll;
-    overflow-y: hidden;
+    //overflow-y: scroll;
     white-space: nowrap;
   
     .card {
@@ -20,16 +20,24 @@
   overflow: scroll;
 }
 
-#chartRapper {
-  height: 300px;
-  overflow-y: scroll;
-}
+//#chartRapper {
+ // height: 300px;
+  //overflow-y: scroll;
+//}
 
 #tapPopupInfo {
+  width: 350px;
   padding-top:15px;
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  
 }
 
 #helpText {
   display: none;
   color: black;
 }
+
+

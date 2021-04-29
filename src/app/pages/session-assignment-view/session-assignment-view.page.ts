@@ -225,7 +225,7 @@ export class SessionAssignmentViewPage implements OnInit {
     // Prepare a loading controller
     this.loading = await this.loadingController.create({
       message: 'Please Wait',
-      cssClass: 'custom-loading',
+      cssClass: 'custom-class custom-loading',
       duration: 60000,
       backdropDismiss: false
     });
@@ -303,11 +303,27 @@ export class SessionAssignmentViewPage implements OnInit {
             data: totalDurData,
             backgroundColor: 'rgb(47, 196, 50)',
             hoverBackgroundColor: 'rgb(35, 145, 37)'
+          }],
+          // y-axis label 
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              hoverBackgroundColor: 'rgb(199, 178, 174 )'
+            }
           }]
         },
         options: {
+          legend: {
+            display: true,
+            position: "top",
+            align: "end"
+          },
           tooltips: {
             enabled: false,
+            backgroundColor: 'rgba(255,255,255,1)',
+            borderColor: 'rgba(20,100,124)',
+            borderWidth: 1,
             custom: (tooltipModel) => {
               // Tooltip Element
               var tooltipEl = document.getElementById('tapPopupInfo');
@@ -343,14 +359,14 @@ export class SessionAssignmentViewPage implements OnInit {
                   }
                 }
 
-                var innerHtml = '<ion-row id="helpText"><ion-col>Tap on the graph for more information!</ion-col></ion-row>'
+                var innerHtml = '<ion-row id="helpText"></ion-row>'
                 let sanitisedImg = this.dms.sanitize(SecurityContext.HTML, this.dms.bypassSecurityTrustHtml("data:image/png;base64, " + imgSrc));
-                innerHtml += '<ion-row><ion-col size="6"><img src="' + sanitisedImg
-                  + '" alt="google" width="150" height="150"></img> </ion-col>'
+                innerHtml += '<ion-card class="popUp"><ion-row><ion-col><img src="' + sanitisedImg
+                  + '" alt="google"></img> </ion-col></ion-row>'
 
-                innerHtml += '<ion-col size="6"><table><tbody>';
-                innerHtml += '<tr><td>Student: ' + studentName + '</td></tr>'
-                innerHtml += '<tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr>'
+                innerHtml += '<ion-row><table><tbody>';
+                innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>'
+                innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>'
 
                 bodyLines.forEach(function (body, i) {
                   var colors = tooltipModel.labelColors[i];
@@ -361,7 +377,7 @@ export class SessionAssignmentViewPage implements OnInit {
                   var span = '<span style="' + style + '"></span>';
                   innerHtml += '<tr><td>' + span + body + '</td></tr>';
                 });
-                innerHtml += '</tbody></table></ion-col></ion-row>';
+                innerHtml += '</tbody></table></ion-col></ion-row> </ion-card-content></ion-card>';
 
                 tooltipEl.innerHTML = innerHtml;
               }

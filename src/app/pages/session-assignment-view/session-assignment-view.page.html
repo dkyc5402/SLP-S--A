@@ -29,7 +29,7 @@
         <ion-label>
           [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}
         </ion-label>
-        <ion-icon style="position: absolute;right:1em;zoom:1.3" button src="assets/images/close-outline.svg"
+        <ion-icon style="position: absolute;right:1em;zoom:1.3" button src="assets/images/1001-cross.svg"
           (click)="PreviousPage()"></ion-icon>
         <br />
       </div>
@@ -37,13 +37,14 @@
         <ion-label>
           [{{asgmtlist.created_By_Username}}-{{asgmtlist.created_By_Level}}] {{asgmtlist.asgmt_Title}}
         </ion-label>
-        <ion-icon style="position: absolute;right:1em;zoom:1.3" button src="assets/images/close-outline.svg"
+        <ion-icon style="position: absolute;right:1em;zoom:1.3" button src="assets/images/1001-cross.svg"
           (click)="PreviousPage()"></ion-icon>
         <br />
       </div>
 
+      <!-- discussion -->
       <div class="center">
-        <ion-card *ngIf="asgmtlist" style="box-shadow: black;">
+        <ion-card *ngIf="asgmtlist">
           <b style="font-size: x-large;color:black">Question</b>
           <ion-item>
             <ion-img *ngIf="asgmtlist.asgmt_Data==null" ionImgViewer style="width:10em;height:10em;"
@@ -78,23 +79,29 @@
       </div>
     </div>
     <!-- </div> -->
+    <!-- Analysis -->
   </div>
   <div [hidden]="!(segmentModel === 'analysis')">
     <ion-card class="card-chart" #cardChart>
       <ion-card-header>
         <ion-card-title>Emotion Analysis (s)</ion-card-title>
+        <ion-card-subtitle>Scroll through the chart to view other rows</ion-card-subtitle>
+        <ion-card-subtitle>Tap on the graph for more information!</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
+
         <div id="chartRapper">
           <div id="chartWrapper">
-            <canvas id="analysisBarChart" #barChart height="1026" width="616"></canvas>
+            <canvas id="analysisBarChart" #barChart width="616"></canvas>
           </div>
         </div>
         <ion-grid id="tapPopupInfo">
-          <ion-row id="helpText">
+          <ion-row id="helpText" justify-content-center>
+            <!--
             <ion-col>
               Tap on the graph for more information!
             </ion-col>
+            -->
           </ion-row>
         </ion-grid>
       </ion-card-content>
