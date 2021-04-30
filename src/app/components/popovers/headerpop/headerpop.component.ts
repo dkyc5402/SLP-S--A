@@ -72,6 +72,7 @@ export class HeaderpopComponent implements OnInit {
             message: 'Are you sure you want to logout?',
             buttons: [{
               text: 'Cancel',
+              cssClass:'cancelbtn',
               role: 'cancel',
               handler: () => {
                 console.log('You clicked me');
@@ -79,7 +80,7 @@ export class HeaderpopComponent implements OnInit {
             },
             {
               text: 'Okay',
-              cssClass: 'secondary',
+              cssClass: 'logoutbtn',
               handler: () => {
                 //  console.log('Second Handler');
                 this.storage.remove('mysession')

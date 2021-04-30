@@ -51,7 +51,7 @@ ionViewDidEnter(){
   }
 
 
-  signin() {
+  signup() {
     this.router.navigateByUrl('/signup');  
   }
   
