@@ -446,7 +446,7 @@ const openURL = async (url, ev, direction, animation) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <img [src]=\"imagedisplay\">\r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <img style=\"height:288px\" [src]=\"imagedisplay\">\r\n</ion-content>");
 
 /***/ }),
 

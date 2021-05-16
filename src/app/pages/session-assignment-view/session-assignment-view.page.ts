@@ -227,7 +227,7 @@ export class SessionAssignmentViewPage implements OnInit {
       message: 'Please Wait',
       cssClass: 'custom-class custom-loading',
       duration: 60000,
-      backdropDismiss: false
+      backdropDismiss: true,
     });
     // Present the loading controller
 
@@ -427,7 +427,7 @@ export class SessionAssignmentViewPage implements OnInit {
 
     // https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
     var proxyUrl = "https://serene-shelf-84252.herokuapp.com/" //proxy for CORS
-    var dbApiUrl = "https://slpidev.azurewebsites.net/api/analysis/viewAnalysisAsgmtDiscuss"
+    var dbApiUrl = "https://fspslpuws.azurewebsites.net/api/analysis/viewAnalysisAsgmtDiscuss"
 
     return fetch(proxyUrl + dbApiUrl, {
       method: "POST",

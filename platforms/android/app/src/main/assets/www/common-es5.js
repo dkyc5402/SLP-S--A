@@ -678,7 +678,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\r\n  <img [src]=\"imagedisplay\">\r\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\r\n  <img style=\"height:288px\" [src]=\"imagedisplay\">\r\n</ion-content>";
     /***/
   },
 
