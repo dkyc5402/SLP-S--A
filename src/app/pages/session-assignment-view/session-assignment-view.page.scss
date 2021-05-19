@@ -40,4 +40,23 @@
   color: black;
 }
 
+.select-text {
+    overflow: visible;
+}
+.select-icon {
+    position: initial;
+    opacity: 0.33;
+}
+
+ion-select::part(placeholder) {
+  overflow: visible;
+}
+
+ion-select::part(text) {
+  overflow: visible;
+}
+
+ion-select::part(icon) {
+  position: initial;
+}
 
