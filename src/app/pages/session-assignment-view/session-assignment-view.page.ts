@@ -239,7 +239,15 @@ export class SessionAssignmentViewPage implements OnInit {
 
   //Get Sort Type
   getSort() {
-    console.log(this.sValue,this.sOrder)
+    console.log(this.sValue, this.sOrder)
+    var val = this.sValue;
+    var order = this.sOrder;
+
+
+  }
+
+  getData() {
+    
   }
 
 
