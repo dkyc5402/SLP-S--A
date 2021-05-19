@@ -105,8 +105,8 @@
 
               <ion-col size="5">
                 <ion-item style="overflow:visible;">
-                  <ion-label style="display:none;">Order</ion-label> 
-                  <ion-select style="overflow:visible;font-size: small;" placeholder="Order">
+                  <ion-label style="display:none;">Order</ion-label>
+                  <ion-select [(ngModel)]="sOrder" id="selectOrder" style="overflow:visible;font-size: small;" placeholder="Order">
                     <ion-select-option value="desc">High to Low</ion-select-option>
                     <ion-select-option value="asec">Low to High</ion-select-option>
                   </ion-select>
@@ -116,16 +116,17 @@
               <ion-col size="5">
                 <ion-item style="overflow:visible; ">
                   <ion-label style="display:none;">Value to be Sorted By</ion-label>
-                  <ion-select style="overflow:visible;font-size: small;" placeholder="Value">
+                  <ion-select [(ngModel)]="sValue" id="selectValue" style="overflow:visible;font-size: small;" placeholder="Value">
                     <ion-select-option value="bored">Bored</ion-select-option>
                     <ion-select-option value="frus">Frustrated</ion-select-option>
                     <ion-select-option value="total">Total</ion-select-option>
                   </ion-select>
                 </ion-item>
               </ion-col>
-              
+
               <ion-col size="2">
-                <ion-button size="small" style="border-radius: 10px; --background: #4B5C7C; color: white;">Sort
+                <ion-button (click)="getSort()" size="small"
+                  style="border-radius: 10px; --background: #4B5C7C; color: white;">Sort
                 </ion-button>
               </ion-col>
 
@@ -160,3 +161,4 @@
     vertical="end" horizontal="end" style="position: absolute;bottom: 1em;right: 1em;"><img
       style="width:3em;height:3em;" src="assets/images/chat-1.svg"></ion-fab-button>
 </ion-footer>
+

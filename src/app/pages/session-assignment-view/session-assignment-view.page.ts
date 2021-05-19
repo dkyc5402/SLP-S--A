@@ -30,6 +30,8 @@ export class SessionAssignmentViewPage implements OnInit {
   @ViewChild('barChart') barChart;
   @ViewChild('cardChart') cardChart;
   bars: any;
+  sValue: any;
+  sOrder: any;
 
   constructor(private ngZone: NgZone, private nativeHttp: HTTP, private globalService: GlobalService, private platform: Platform, private sessionmypage: SessionMyPage, public loadingController: LoadingController, public dms: DomSanitizer, private router: Router, private activatedRoute: ActivatedRoute, private modalController: ModalController, private assignmentsService: AssignmentsService, private storage: Storage, private networkService: NetworkService) { }
   loading: any;
@@ -233,6 +235,14 @@ export class SessionAssignmentViewPage implements OnInit {
 
     await this.loading.present();
   }
+
+
+  //Get Sort Type
+  getSort() {
+    console.log(this.sValue,this.sOrder)
+  }
+
+
   //Display Image 
   async presentModalImage(imgdisplayinapp) {
     const modal = await this.modalController.create({
