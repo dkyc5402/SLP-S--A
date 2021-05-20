@@ -14,6 +14,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { HTTP } from '@ionic-native/http/ngx';
 import { TestBed } from '@angular/core/testing';
 import { Chart } from 'chart.js';
+import { empty } from 'rxjs';
 @Component({
   selector: 'app-session-assignment-view',
   templateUrl: './session-assignment-view.page.html',
@@ -237,18 +238,7 @@ export class SessionAssignmentViewPage implements OnInit {
   }
 
 
-  //Get Sort Type
-  getSort() {
-    console.log(this.sValue, this.sOrder)
-    var val = this.sValue;
-    var order = this.sOrder;
-
-
-  }
-
-  getData() {
-    
-  }
+ 
 
 
   //Display Image 
@@ -271,6 +261,47 @@ export class SessionAssignmentViewPage implements OnInit {
     });
     return await modal.present();
   }
+
+  getSort() {
+    //function updates sValue and sOrder
+    this.sOrder;
+    this.sValue;
+    console.log("values have been updated: ", this.sValue, this.sOrder);
+    this.createBarChart();
+  }
+
+
+  sortEntry(entry) {
+    var data = entry;
+    var order = this.sOrder;
+    var val = this.sValue;
+
+    // default no sort to load
+    if (order == null) {
+      return entry;
+    }
+    //if to be sorted
+    if (order == "asec") {
+      if (val == "bored") {
+        data.sort((a, b) => Number(a.boredomDuration) - Number(b.boredomDuration));
+      } else if (val == "frus") {
+        data.sort((a, b) => Number(a.frustDuration) - Number(b.frustDuration));
+      } else if (val == "total") {
+        data.sort((a, b) => Number(a.duration) - Number(b.duration));
+      }
+    } else if (order == "desc") {
+      if (val == "bored") {
+        data.sort((a, b) => Number(b.boredomDuration) - Number(a.boredomDuration));
+      } else if (val == "frus") {
+        data.sort((a, b) => Number(b.frustDuration) - Number(a.frustDuration));
+      } else if (val == "total") {
+        data.sort((a, b) => Number(b.duration) - Number(a.duration));
+      }
+    }
+    return data;
+    
+  }
+
   createBarChart() {
     let ctx = this.barChart.nativeElement
     let jsonData = {
@@ -283,6 +314,10 @@ export class SessionAssignmentViewPage implements OnInit {
 
     this.fetchChartData(jsonData).then(fetchData => {
       let latestFirstData = fetchData.reverse()
+      console.log("before sorted", latestFirstData)
+      latestFirstData = this.sortEntry(latestFirstData);
+      console.log("after sorted", latestFirstData)
+
       let xAxisLabels = [];
       let boredDurData = [];
       let frusDurData = [];
@@ -290,13 +325,14 @@ export class SessionAssignmentViewPage implements OnInit {
 
       for (var i = 0; i < latestFirstData.length; i++) {
         let entry = latestFirstData[i]
+        
         let tmp = entry.student_Username + ", " + entry.asgmtDiscuss_Id.substring(0, 6)
-
         boredDurData.push(entry.boredomDuration)
         frusDurData.push(entry.frustDuration)
         totalDurData.push(entry.duration)
         xAxisLabels.push(tmp)
       }
+      
 
       // Bar Chart creation
       this.bars = new Chart(ctx, {

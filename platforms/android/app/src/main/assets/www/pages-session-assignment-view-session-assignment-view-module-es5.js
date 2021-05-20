@@ -36672,18 +36672,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }, _callee3, this);
           }));
-        } //Get Sort Type
-
-      }, {
-        key: "getSort",
-        value: function getSort() {
-          console.log(this.sValue, this.sOrder);
-          var val = this.sValue;
-          var order = this.sOrder;
-        }
-      }, {
-        key: "getData",
-        value: function getData() {} //Display Image 
+        } //Display Image 
 
       }, {
         key: "presentModalImage",
@@ -36753,6 +36742,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
+        key: "getSort",
+        value: function getSort() {
+          //function updates sValue and sOrder
+          this.sOrder;
+          this.sValue;
+          console.log("values have been updated: ", this.sValue, this.sOrder);
+          this.createBarChart();
+        }
+      }, {
+        key: "sortEntry",
+        value: function sortEntry(entry) {
+          var data = entry;
+          var order = this.sOrder;
+          var val = this.sValue; // default no sort to load
+
+          if (order == null) {
+            return entry;
+          } //if to be sorted
+
+
+          if (order == "asec") {
+            if (val == "bored") {
+              data.sort(function (a, b) {
+                return Number(a.boredomDuration) - Number(b.boredomDuration);
+              });
+            } else if (val == "frus") {
+              data.sort(function (a, b) {
+                return Number(a.frustDuration) - Number(b.frustDuration);
+              });
+            } else if (val == "total") {
+              data.sort(function (a, b) {
+                return Number(a.duration) - Number(b.duration);
+              });
+            }
+          } else if (order == "desc") {
+            if (val == "bored") {
+              data.sort(function (a, b) {
+                return Number(b.boredomDuration) - Number(a.boredomDuration);
+              });
+            } else if (val == "frus") {
+              data.sort(function (a, b) {
+                return Number(b.frustDuration) - Number(a.frustDuration);
+              });
+            } else if (val == "total") {
+              data.sort(function (a, b) {
+                return Number(b.duration) - Number(a.duration);
+              });
+            }
+          }
+
+          return data;
+        }
+      }, {
         key: "createBarChart",
         value: function createBarChart() {
           var _this5 = this;
@@ -36767,6 +36809,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
           this.fetchChartData(jsonData).then(function (fetchData) {
             var latestFirstData = fetchData.reverse();
+            console.log("before sorted", latestFirstData);
+            latestFirstData = _this5.sortEntry(latestFirstData);
+            console.log("after sorted", latestFirstData);
             var xAxisLabels = [];
             var boredDurData = [];
             var frusDurData = [];
