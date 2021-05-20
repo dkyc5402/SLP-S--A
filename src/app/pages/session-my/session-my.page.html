@@ -7,12 +7,13 @@
     <li style="display: inline;"><a href="/tabs/main"> Home </a><i class="ion-chevron-right"></i></li>
     <li style="display: inline;" class="active"> My Sessions </li>
   </ul>     -->
-  <p style="
-      text-decoration-line: underline;
-      text-decoration-color: #4B5C7C;
-      padding: 0% 2% 1% 2%;
-  ">Sessions | My Sessions</p>
+  
   <div class="fourthcontent">
+    <p style="
+          text-decoration-line: underline;
+          text-decoration-color: #4B5C7C;
+          padding: 0% 2% 1% 2%;
+      ">Sessions | My Sessions</p>
     <div *ngIf="boolHaveSession" style="font-size: larger;"><b>{{NoSessionText}}</b></div>
     <!--Session Not Yet Accepted By Tutor-->
     <ion-list  *ngFor="let item of textdisplay; let i = index" class="accordion-list" lines="none" detail="false" >

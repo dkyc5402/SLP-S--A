@@ -8,12 +8,13 @@
     <li style="display: inline;"><a href="/tabs/main"> Home </a><i class="ion-chevron-right"></i></li>
     <li style="display: inline;" class="active"> Join Session </li>
   </ul>     -->
-  <p style="
-        text-decoration-line: underline;
-        text-decoration-color: #4B5C7C;
-        padding: 0% 2% 1% 2%;
-    ">Sessions | Tutor Session</p>
+  
   <div class="fourthcontent">
+    <p style="
+            text-decoration-line: underline;
+            text-decoration-color: #4B5C7C;
+            padding: 0% 2% 1% 2%;
+        ">Sessions | Tutor Session</p>
     <div *ngIf="boolHaveSession" style="font-size: larger;"><b>{{NoSessionText}}</b></div>
   <ion-list *ngFor="let item of textdisplay; let i = index" class="accordion-list" lines="none" detail="false" >
     <ion-grid tappable style="background-color: #99A7C2;border-radius: 15px;" [ngClass]="{'section-active': item.open, 'section': !item.open}">
