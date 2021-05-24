@@ -38293,15 +38293,35 @@ let SessionAssignmentViewPage = class SessionAssignmentViewPage {
                                 console.log('puData:', puData);
                                 return puData;
                             }
+                            function generateTooltipChart(valueArray) {
+                                new chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"](document.getElementById("tooltipChart"), {
+                                    type: 'horizontalBar',
+                                    data: {
+                                        labels: ["Bored", "Frustrated", "Total"],
+                                        datasets: [
+                                            {
+                                                label: "Emotion Data",
+                                                backgroundColor: ["rgb(212, 168, 110)", "rgb(255, 105, 105)", "rgb(47, 196, 50)"],
+                                                data: valueArray
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        legend: { display: false },
+                                        title: {
+                                            display: true,
+                                            text: 'popupbar'
+                                        }
+                                    }
+                                });
+                            }
                             // Set Text
                             if (tooltipModel.body) {
                                 var titleLines = tooltipModel.title || [];
                                 var studentName = titleLines[0].substring(0, titleLines[0].indexOf(","));
                                 var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length);
                                 var bodyLines = tooltipModel.body.map(getBody);
-                                console.log(bodyLines);
-                                var test = getWidth(bodyLines);
-                                console.log(test);
+                                var selectedValues = getWidth(bodyLines);
                                 let imgSrc;
                                 // getting img of asgmtDisc
                                 for (var i = 0; i < this.asgmtdiscusslist.length; i++) {
@@ -38314,20 +38334,22 @@ let SessionAssignmentViewPage = class SessionAssignmentViewPage {
                                 let sanitisedImg = this.dms.sanitize(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SecurityContext"].HTML, this.dms.bypassSecurityTrustHtml("data:image/png;base64, " + imgSrc));
                                 innerHtml += '<ion-card class="popUp"><ion-row><ion-col><img src="' + sanitisedImg
                                     + '" alt="google"></img> </ion-col></ion-row>';
+                                innerHtml += '<div><canvas id="tooltipChart"></canvas></div>';
                                 innerHtml += '<ion-row><table><tbody>';
                                 innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>';
                                 innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>';
-                                bodyLines.forEach(function (body, i) {
-                                    var colors = tooltipModel.labelColors[i];
-                                    var style = 'background:' + colors.backgroundColor;
-                                    style += '; border-color:' + colors.borderColor;
-                                    style += '; border-width: 2px'
-                                        + ";display: inline-block;width: 10px;height: 10px;margin-right: 10px;";
-                                    var span = '<span style="' + style + '"></span>';
-                                    innerHtml += '<tr><td>' + span + body + '</td></tr>';
-                                });
-                                innerHtml += '</tbody></table></ion-col></ion-row> </ion-card-content></ion-card>';
+                                // bodyLines.forEach(function (body, i) {
+                                //   var colors = tooltipModel.labelColors[i];
+                                //   var style = 'background:' + colors.backgroundColor;
+                                //   style += '; border-color:' + colors.borderColor;
+                                //   style += '; border-width: 2px'
+                                //     + ";display: inline-block;width: 10px;height: 10px;margin-right: 10px;"
+                                //   var span = '<span style="' + style + '"></span>';
+                                //   innerHtml += '<tr><td>' + span + body + '</td></tr>';
+                                // });
+                                // innerHtml += '</tbody></table></ion-col></ion-row> </ion-card-content></ion-card>';
                                 tooltipEl.innerHTML = innerHtml;
+                                generateTooltipChart(selectedValues);
                             }
                             // `this` will be the overall tooltip
                             var position = ctx.getBoundingClientRect();
