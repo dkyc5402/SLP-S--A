@@ -395,6 +395,19 @@ export class SessionAssignmentViewPage implements OnInit {
               function getBody(bodyItem) {
                 return bodyItem.lines;
               }
+              
+              function getWidth(bodyLines) {
+                var puData = [];
+                bodyLines.forEach(getValues);
+
+                function getValues(value, index, array) {
+                  var v = value[0].split(':')[1];
+                  puData.push(parseInt(v));
+                }
+
+                console.log('puData:', puData);
+                return puData;
+              }
 
               // Set Text
               if (tooltipModel.body) {
@@ -403,6 +416,10 @@ export class SessionAssignmentViewPage implements OnInit {
                 var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length)
 
                 var bodyLines = tooltipModel.body.map(getBody);
+                console.log(bodyLines);
+                var test = getWidth(bodyLines);
+                console.log(test);
+
                 let imgSrc;
 
                 // getting img of asgmtDisc
@@ -413,6 +430,7 @@ export class SessionAssignmentViewPage implements OnInit {
                   }
                 }
 
+
                 var innerHtml = '<ion-row id="helpText"></ion-row>'
                 let sanitisedImg = this.dms.sanitize(SecurityContext.HTML, this.dms.bypassSecurityTrustHtml("data:image/png;base64, " + imgSrc));
                 innerHtml += '<ion-card class="popUp"><ion-row><ion-col><img src="' + sanitisedImg
@@ -421,6 +439,8 @@ export class SessionAssignmentViewPage implements OnInit {
                 innerHtml += '<ion-row><table><tbody>';
                 innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>'
                 innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>'
+
+                
 
                 bodyLines.forEach(function (body, i) {
                   var colors = tooltipModel.labelColors[i];
@@ -499,4 +519,5 @@ export class SessionAssignmentViewPage implements OnInit {
     //   }).then(resp => resp.json())
     // ))
   }
+
 }
