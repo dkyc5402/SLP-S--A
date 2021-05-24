@@ -36892,22 +36892,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
 
                     function generateTooltipChart(valueArray, student, agsmtId) {
+                      var bored = valueArray[0];
+                      var frus = valueArray[1];
+                      var total = valueArray[2];
                       var title = 'Student: ' + student + " Discuss ID: " + agsmtId;
                       var canvas = document.getElementById("tooltipChart");
                       var tooltipCTX = canvas.getContext("2d");
                       new chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"](tooltipCTX, {
                         type: 'horizontalBar',
                         data: {
-                          labels: ["Bored", "Frustrated", "Total"],
+                          labels: ["Emotion Data"],
                           datasets: [{
-                            label: "Emotion Data",
-                            backgroundColor: ["rgb(212, 168, 110)", "rgb(255, 105, 105)", "rgb(47, 196, 50)"],
-                            data: valueArray
+                            label: "Bored",
+                            backgroundColor: "rgb(212, 168, 110)",
+                            data: [bored]
+                          }, {
+                            label: "Frustrated",
+                            backgroundColor: "rgb(255, 105, 105)",
+                            data: [frus]
+                          }, {
+                            label: "Total",
+                            backgroundColor: "rgb(47, 196, 50)",
+                            data: [total]
                           }]
                         },
                         options: {
+                          layout: {
+                            padding: {
+                              right: 20
+                            }
+                          },
+                          scales: {
+                            xAxes: [{
+                              gridLines: {
+                                display: false
+                              },
+                              ticks: {
+                                display: false
+                              }
+                            }],
+                            yAxes: [{
+                              gridLines: {
+                                display: false
+                              },
+                              ticks: {
+                                display: false
+                              }
+                            }]
+                          },
                           legend: {
-                            display: false
+                            display: true,
+                            position: "bottom"
+                          },
+                          animation: {
+                            duration: 1,
+                            onComplete: function onComplete() {
+                              var chartInstance = this.chart,
+                                  ctx = chartInstance.ctx;
+                              ctx.font = chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"].helpers.fontString(chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"].defaults.global.defaultFontSize, chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"].defaults.global.defaultFontStyle, chart_js__WEBPACK_IMPORTED_MODULE_14__["Chart"].defaults.global.defaultFontFamily);
+                              ctx.textAlign = 'center';
+                              ctx.textBaseline = 'bottom';
+                              this.data.datasets.forEach(function (dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function (bar, index) {
+                                  var data = dataset.data[index];
+                                  ctx.fillText(data, bar._model.x + 10, bar._model.y + 7);
+                                });
+                              });
+                            }
                           },
                           title: {
                             display: true,
