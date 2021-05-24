@@ -13,6 +13,7 @@ import { SessionMyPage } from '../session-my/session-my.page';
 import { Observable } from 'rxjs/internal/Observable';
 import { HTTP } from '@ionic-native/http/ngx';
 import { TestBed } from '@angular/core/testing';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Chart } from 'chart.js';
 import { empty } from 'rxjs';
 @Component({
@@ -409,7 +410,8 @@ export class SessionAssignmentViewPage implements OnInit {
                 return puData;
               }
 
-              function generateTooltipChart(valueArray) {
+              function generateTooltipChart(valueArray, student, agsmtId) {
+                var title = 'Student: ' + student + " Discuss ID: " + agsmtId;
                 new Chart(document.getElementById("tooltipChart"), {
                   type: 'horizontalBar',
                   data: {
@@ -426,7 +428,7 @@ export class SessionAssignmentViewPage implements OnInit {
                     legend: { display: false },
                     title: {
                       display: true,
-                      text: 'popupbar'
+                      text: title
                     }
                   }
                 });
@@ -459,9 +461,9 @@ export class SessionAssignmentViewPage implements OnInit {
                   + '" alt="google"></img> </ion-col></ion-row>'
 
                 innerHtml += '<div><canvas id="tooltipChart"></canvas></div>'
-                innerHtml += '<ion-row><table><tbody>';
-                innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>'
-                innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>'
+                // innerHtml += '<ion-row><table><tbody>';
+                // innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>'
+                // innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>'
 
                 
 
@@ -478,7 +480,7 @@ export class SessionAssignmentViewPage implements OnInit {
 
                 tooltipEl.innerHTML = innerHtml;
 
-                generateTooltipChart(selectedValues);
+                generateTooltipChart(selectedValues, studentName, asgmtDiscussId);
               }
 
               // `this` will be the overall tooltip
