@@ -396,7 +396,7 @@ export class SessionAssignmentViewPage implements OnInit {
                 return bodyItem.lines;
               }
 
-              function getWidth(bodyLines) {
+              function getSelectedValuesArray(bodyLines) {
                 var puData = [];
                 bodyLines.forEach(getValues);
 
@@ -410,7 +410,6 @@ export class SessionAssignmentViewPage implements OnInit {
               }
 
               function generateTooltipChart(valueArray, student, agsmtId) {
-
                 var bored = valueArray[0];
                 var frus = valueArray[1];
                 var total = valueArray[2];
@@ -467,7 +466,8 @@ export class SessionAssignmentViewPage implements OnInit {
                       onComplete: function () {
                         var chartInstance = this.chart,
                           ctx = chartInstance.ctx;
-                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize,
+                          Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
                         ctx.textAlign = 'center';
                         ctx.textBaseline = 'bottom';
 
@@ -498,7 +498,7 @@ export class SessionAssignmentViewPage implements OnInit {
                 var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length)
 
                 var bodyLines = tooltipModel.body.map(getBody);
-                var selectedValues = getWidth(bodyLines);
+                var selectedValues = getSelectedValuesArray(bodyLines);
 
                 let imgSrc;
 
