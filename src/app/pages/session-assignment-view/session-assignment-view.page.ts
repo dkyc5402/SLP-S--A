@@ -13,7 +13,6 @@ import { SessionMyPage } from '../session-my/session-my.page';
 import { Observable } from 'rxjs/internal/Observable';
 import { HTTP } from '@ionic-native/http/ngx';
 import { TestBed } from '@angular/core/testing';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Chart } from 'chart.js';
 import { empty } from 'rxjs';
 @Component({
@@ -239,7 +238,7 @@ export class SessionAssignmentViewPage implements OnInit {
   }
 
 
- 
+
 
 
   //Display Image 
@@ -300,7 +299,7 @@ export class SessionAssignmentViewPage implements OnInit {
       }
     }
     return data;
-    
+
   }
 
   createBarChart() {
@@ -326,14 +325,14 @@ export class SessionAssignmentViewPage implements OnInit {
 
       for (var i = 0; i < latestFirstData.length; i++) {
         let entry = latestFirstData[i]
-        
+
         let tmp = entry.student_Username + ", " + entry.asgmtDiscuss_Id.substring(0, 6)
         boredDurData.push(entry.boredomDuration)
         frusDurData.push(entry.frustDuration)
         totalDurData.push(entry.duration)
         xAxisLabels.push(tmp)
       }
-      
+
 
       // Bar Chart creation
       this.bars = new Chart(ctx, {
@@ -360,13 +359,13 @@ export class SessionAssignmentViewPage implements OnInit {
             hoverBackgroundColor: 'rgb(35, 145, 37)'
           }],
           // y-axis label 
-          yAxes: [{
-            display: true,
-            scaleLabel: {
-              display: true,
-              hoverBackgroundColor: 'rgb(199, 178, 174 )'
-            }
-          }]
+          // yAxes: [{
+          //   display: true,
+          //   scaleLabel: {
+          //     display: true,
+          //     hoverBackgroundColor: 'rgb(199, 178, 174 )'
+          //   }
+          // }]
         },
         options: {
           legend: {
@@ -396,7 +395,7 @@ export class SessionAssignmentViewPage implements OnInit {
               function getBody(bodyItem) {
                 return bodyItem.lines;
               }
-              
+
               function getWidth(bodyLines) {
                 var puData = [];
                 bodyLines.forEach(getValues);
@@ -412,7 +411,9 @@ export class SessionAssignmentViewPage implements OnInit {
 
               function generateTooltipChart(valueArray, student, agsmtId) {
                 var title = 'Student: ' + student + " Discuss ID: " + agsmtId;
-                new Chart(document.getElementById("tooltipChart"), {
+                var canvas = <HTMLCanvasElement>document.getElementById("tooltipChart");
+                var tooltipCTX = canvas.getContext("2d");
+                new Chart(tooltipCTX, {
                   type: 'horizontalBar',
                   data: {
                     labels: ["Bored", "Frustrated", "Total"],
@@ -465,7 +466,7 @@ export class SessionAssignmentViewPage implements OnInit {
                 // innerHtml += '<ion-card-header><ion-card-subtitle><tr><td>Student: ' + studentName + '</td></tr></ion-card-subtitle>'
                 // innerHtml += '<ion-card-title><tr><td>Discuss Id: ' + asgmtDiscussId + '</td></tr></ion-card-title></ion-card-header><ion-card-content>'
 
-                
+
 
                 // bodyLines.forEach(function (body, i) {
                 //   var colors = tooltipModel.labelColors[i];
@@ -496,10 +497,11 @@ export class SessionAssignmentViewPage implements OnInit {
           },
           scales: {
             yAxes: [{
+              display: true,
               ticks: {
-                beginAtZero: true
-              }
-            }],
+                  beginAtZero: true
+                }
+              }],
           },
           maintainAspectRatio: false
         }

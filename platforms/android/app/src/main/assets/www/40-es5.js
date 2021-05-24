@@ -33,59 +33,59 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-44bf8136.js */
-    "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+    var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-7a8b7a1c.js */
+    "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
     /* harmony import */
 
 
-    var _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./ionic-global-837be8f3.js */
-    "./node_modules/@ionic/core/dist/esm/ionic-global-837be8f3.js");
+    var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./ionic-global-63a97a32.js */
+    "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
     /* harmony import */
 
 
-    var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./helpers-5c745fbd.js */
-    "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+    var _overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./overlays-e9ccff30.js */
+    "./node_modules/@ionic/core/dist/esm/overlays-e9ccff30.js");
     /* harmony import */
 
 
-    var _animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./animation-a635a2fc.js */
-    "./node_modules/@ionic/core/dist/esm/animation-a635a2fc.js");
+    var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./index-9e3fe806.js */
+    "./node_modules/@ionic/core/dist/esm/index-9e3fe806.js");
     /* harmony import */
 
 
-    var _index_79d74e0b_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./index-79d74e0b.js */
-    "./node_modules/@ionic/core/dist/esm/index-79d74e0b.js");
+    var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./theme-ff3fc52f.js */
+    "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
     /* harmony import */
 
 
-    var _hardware_back_button_7b6ede21_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./hardware-back-button-7b6ede21.js */
-    "./node_modules/@ionic/core/dist/esm/hardware-back-button-7b6ede21.js");
+    var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./animation-096c6391.js */
+    "./node_modules/@ionic/core/dist/esm/animation-096c6391.js");
     /* harmony import */
 
 
-    var _overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./overlays-7c699579.js */
-    "./node_modules/@ionic/core/dist/esm/overlays-7c699579.js");
+    var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./hardware-back-button-4a6b37fb.js */
+    "./node_modules/@ionic/core/dist/esm/hardware-back-button-4a6b37fb.js");
     /* harmony import */
 
 
-    var _theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./theme-3f0b0c04.js */
-    "./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js");
+    var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./helpers-dd7e4b7b.js */
+    "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
     /**
      * iOS Toast Enter Animation
      */
 
 
     var iosEnterAnimation = function iosEnterAnimation(baseEl, position) {
-      var baseAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-      var wrapperAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+      var baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+      var wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
       var hostEl = baseEl.host || baseEl;
       var wrapperEl = baseEl.querySelector('.toast-wrapper');
       var bottom = "calc(-10px - var(--ion-safe-area-bottom, 0px))";
@@ -116,8 +116,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var iosLeaveAnimation = function iosLeaveAnimation(baseEl, position) {
-      var baseAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-      var wrapperAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+      var baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+      var wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
       var hostEl = baseEl.host || baseEl;
       var wrapperEl = baseEl.querySelector('.toast-wrapper');
       var bottom = "calc(-10px - var(--ion-safe-area-bottom, 0px))";
@@ -146,8 +146,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var mdEnterAnimation = function mdEnterAnimation(baseEl, position) {
-      var baseAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-      var wrapperAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+      var baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+      var wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
       var hostEl = baseEl.host || baseEl;
       var wrapperEl = baseEl.querySelector('.toast-wrapper');
       var bottom = "calc(8px + var(--ion-safe-area-bottom, 0px))";
@@ -180,8 +180,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var mdLeaveAnimation = function mdLeaveAnimation(baseEl) {
-      var baseAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-      var wrapperAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+      var baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+      var wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
       var hostEl = baseEl.host || baseEl;
       var wrapperEl = baseEl.querySelector('.toast-wrapper');
       wrapperAnimation.addElement(wrapperEl).fromTo('opacity', 0.99, 0);
@@ -197,11 +197,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _classCallCheck(this, Toast);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-        this.didPresent = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastDidPresent", 7);
-        this.willPresent = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastWillPresent", 7);
-        this.willDismiss = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastWillDismiss", 7);
-        this.didDismiss = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastDidDismiss", 7);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        this.didPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastDidPresent", 7);
+        this.willPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastWillPresent", 7);
+        this.willDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastWillDismiss", 7);
+        this.didDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionToastDidDismiss", 7);
         this.presented = false;
         /**
          * How many milliseconds to wait before hiding the toast. By default, it will show
@@ -235,7 +235,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.dispatchCancelHandler = function (ev) {
           var role = ev.detail.role;
 
-          if (Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["i"])(role)) {
+          if (Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["i"])(role)) {
             var cancelButton = _this.getButtons().find(function (b) {
               return b.role === 'cancel';
             });
@@ -248,7 +248,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(Toast, [{
         key: "connectedCallback",
         value: function connectedCallback() {
-          Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["e"])(this.el);
+          Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["e"])(this.el);
         }
         /**
          * Present the toast overlay after it has been created.
@@ -265,7 +265,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this, 'toastEnter', iosEnterAnimation, mdEnterAnimation, this.position);
+                    return Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["d"])(this, 'toastEnter', iosEnterAnimation, mdEnterAnimation, this.position);
 
                   case 2:
                     if (this.duration > 0) {
@@ -305,7 +305,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             clearTimeout(this.durationTimeout);
           }
 
-          return Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["f"])(this, data, role, 'toastLeave', iosLeaveAnimation, mdLeaveAnimation, this.position);
+          return Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["f"])(this, data, role, 'toastLeave', iosLeaveAnimation, mdLeaveAnimation, this.position);
         }
         /**
          * Returns a promise that resolves when the toast did dismiss.
@@ -314,7 +314,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onDidDismiss",
         value: function onDidDismiss() {
-          return Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["g"])(this.el, 'ionToastDidDismiss');
+          return Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["g"])(this.el, 'ionToastDidDismiss');
         }
         /**
          * Returns a promise that resolves when the toast will dismiss.
@@ -323,7 +323,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onWillDismiss",
         value: function onWillDismiss() {
-          return Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["g"])(this.el, 'ionToastWillDismiss');
+          return Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["g"])(this.el, 'ionToastWillDismiss');
         }
       }, {
         key: "getButtons",
@@ -346,7 +346,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   case 0:
                     role = button.role;
 
-                    if (!Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["i"])(role)) {
+                    if (!Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["i"])(role)) {
                       _context2.next = 3;
                       break;
                     }
@@ -400,7 +400,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     _context3.prev = 1;
                     _context3.next = 4;
-                    return Object(_overlays_7c699579_js__WEBPACK_IMPORTED_MODULE_6__["s"])(button.handler);
+                    return Object(_overlays_e9ccff30_js__WEBPACK_IMPORTED_MODULE_2__["s"])(button.handler);
 
                   case 4:
                     rtn = _context3.sent;
@@ -447,16 +447,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             return;
           }
 
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
 
           var buttonGroupsClasses = _defineProperty({
             'toast-button-group': true
           }, "toast-button-group-".concat(side), true);
 
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": buttonGroupsClasses
           }, buttons.map(function (b) {
-            return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", {
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", {
               type: "button",
               "class": buttonClass(b),
               tabIndex: 0,
@@ -464,13 +464,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 return _this3.buttonClick(b);
               },
               part: "button"
-            }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
               "class": "toast-button-inner"
-            }, b.icon && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+            }, b.icon && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
               icon: b.icon,
               slot: b.text === undefined ? 'icon-only' : undefined,
               "class": "toast-icon"
-            }), b.text), mode === 'md' && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
+            }), b.text), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
               type: b.icon !== undefined && b.text === undefined ? 'unbounded' : 'bounded'
             }));
           }));
@@ -485,41 +485,41 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var endButtons = allButtons.filter(function (b) {
             return b.side !== 'start';
           });
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
 
           var wrapperClass = _defineProperty({
             'toast-wrapper': true
           }, "toast-".concat(this.position), true);
 
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             style: {
               zIndex: "".concat(60000 + this.overlayIndex)
             },
-            "class": Object.assign(Object.assign(Object.assign(_defineProperty({}, mode, true), Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_7__["c"])(this.color)), Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_7__["g"])(this.cssClass)), {
+            "class": Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["c"])(this.color, Object.assign(Object.assign(_defineProperty({}, mode, true), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["g"])(this.cssClass)), {
               'toast-translucent': this.translucent
-            }),
+            })),
             tabindex: "-1",
             onIonToastWillDismiss: this.dispatchCancelHandler
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": wrapperClass
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "toast-container",
             part: "container"
-          }, this.renderButtons(startButtons, 'start'), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, this.renderButtons(startButtons, 'start'), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "toast-content"
-          }, this.header !== undefined && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, this.header !== undefined && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "toast-header",
             part: "header"
-          }, this.header), this.message !== undefined && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, this.header), this.message !== undefined && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "toast-message",
             part: "message",
-            innerHTML: Object(_index_79d74e0b_js__WEBPACK_IMPORTED_MODULE_4__["s"])(this.message)
+            innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_3__["s"])(this.message)
           })), this.renderButtons(endButtons, 'end'))));
         }
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }]);
 
@@ -532,7 +532,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return Object.assign((_Object$assign2 = {
         'toast-button': true,
         'toast-button-icon-only': button.icon !== undefined && button.text === undefined
-      }, _defineProperty(_Object$assign2, "toast-button-".concat(button.role), button.role !== undefined), _defineProperty(_Object$assign2, 'ion-focusable', true), _defineProperty(_Object$assign2, 'ion-activatable', true), _Object$assign2), Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_7__["g"])(button.cssClass));
+      }, _defineProperty(_Object$assign2, "toast-button-".concat(button.role), button.role !== undefined), _defineProperty(_Object$assign2, 'ion-focusable', true), _defineProperty(_Object$assign2, 'ion-activatable', true), _Object$assign2), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["g"])(button.cssClass));
     };
 
     Toast.style = {

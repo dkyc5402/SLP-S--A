@@ -12,15 +12,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"], {
   /***/
-  "./node_modules/@ionic/core/dist/esm/button-active-0d5784f9.js":
+  "./node_modules/@ionic/core/dist/esm/button-active-4927a4c1.js":
   /*!*********************************************************************!*\
-    !*** ./node_modules/@ionic/core/dist/esm/button-active-0d5784f9.js ***!
+    !*** ./node_modules/@ionic/core/dist/esm/button-active-4927a4c1.js ***!
     \*********************************************************************/
 
   /*! exports provided: c */
 
   /***/
-  function node_modulesIonicCoreDistEsmButtonActive0d5784f9Js(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesIonicCoreDistEsmButtonActive4927a4c1Js(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -33,21 +33,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony import */
 
 
-    var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-44bf8136.js */
-    "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+    var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-7a8b7a1c.js */
+    "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
     /* harmony import */
 
 
-    var _index_eea61379_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./index-eea61379.js */
-    "./node_modules/@ionic/core/dist/esm/index-eea61379.js");
+    var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./haptic-27b3f981.js */
+    "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js");
     /* harmony import */
 
 
-    var _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./haptic-7b8ba70a.js */
-    "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js");
+    var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./index-f49d994d.js */
+    "./node_modules/@ionic/core/dist/esm/index-f49d994d.js");
 
     var createButtonActiveGesture = function createButtonActiveGesture(el, isButton) {
       var currentTouchedButton;
@@ -79,7 +79,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }
 
         var buttonToModify = currentTouchedButton;
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
           return buttonToModify.classList.add('ion-activated');
         });
         hapticFeedbackFn();
@@ -93,7 +93,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }
 
         var buttonToModify = currentTouchedButton;
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
           return buttonToModify.classList.remove('ion-activated');
         });
         /**
@@ -112,19 +112,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         currentTouchedButton = undefined;
       };
 
-      return Object(_index_eea61379_js__WEBPACK_IMPORTED_MODULE_1__["createGesture"])({
+      return Object(_index_f49d994d_js__WEBPACK_IMPORTED_MODULE_2__["createGesture"])({
         el: el,
         gestureName: 'buttonActiveDrag',
         threshold: 0,
         onStart: function onStart(ev) {
-          return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["a"]);
+          return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["a"]);
         },
         onMove: function onMove(ev) {
-          return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["b"]);
+          return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["b"]);
         },
         onEnd: function onEnd() {
           clearActiveButton(true);
-          Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
+          Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["h"])();
           initialTouchedButton = undefined;
         }
       });
@@ -134,15 +134,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
-  "./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js":
+  "./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js":
   /*!**************************************************************************!*\
-    !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js ***!
+    !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js ***!
     \**************************************************************************/
 
   /*! exports provided: a, d */
 
   /***/
-  function node_modulesIonicCoreDistEsmFrameworkDelegateD1eb6504Js(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesIonicCoreDistEsmFrameworkDelegate4392cd63Js(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -158,6 +158,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     __webpack_require__.d(__webpack_exports__, "d", function () {
       return detachComponent;
     });
+    /* harmony import */
+
+
+    var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./helpers-dd7e4b7b.js */
+    "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
 
     var attachComponent = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(delegate, container, component, cssClasses, componentProps) {
@@ -195,19 +201,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 container.appendChild(el);
+                _context.next = 10;
+                return new Promise(function (resolve) {
+                  return Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__["c"])(el, resolve);
+                });
 
-                if (!el.componentOnReady) {
-                  _context.next = 11;
-                  break;
-                }
-
-                _context.next = 11;
-                return el.componentOnReady();
-
-              case 11:
+              case 10:
                 return _context.abrupt("return", el);
 
-              case 12:
+              case 11:
               case "end":
                 return _context.stop();
             }
@@ -237,15 +239,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
-  "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js":
+  "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js":
   /*!**************************************************************!*\
-    !*** ./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js ***!
+    !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
     \**************************************************************/
 
   /*! exports provided: a, b, c, d, h */
 
   /***/
-  function node_modulesIonicCoreDistEsmHaptic7b8ba70aJs(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesIonicCoreDistEsmHaptic27b3f981Js(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -411,15 +413,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
-  "./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js":
+  "./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js":
   /*!***********************************************************************!*\
-    !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js ***!
+    !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js ***!
     \***********************************************************************/
 
   /*! exports provided: S */
 
   /***/
-  function node_modulesIonicCoreDistEsmSpinnerConfigsC78e170eJs(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesIonicCoreDistEsmSpinnerConfigsCd7845afJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -542,15 +544,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
-  "./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js":
+  "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js":
   /*!*************************************************************!*\
-    !*** ./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js ***!
+    !*** ./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js ***!
     \*************************************************************/
 
   /*! exports provided: c, g, h, o */
 
   /***/
-  function node_modulesIonicCoreDistEsmTheme3f0b0c04Js(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesIonicCoreDistEsmThemeFf3fc52fJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -587,10 +589,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
      */
 
 
-    var createColorClasses = function createColorClasses(color) {
-      return typeof color === 'string' && color.length > 0 ? _defineProperty({
+    var createColorClasses = function createColorClasses(color, cssClassMap) {
+      return typeof color === 'string' && color.length > 0 ? Object.assign(_defineProperty({
         'ion-color': true
-      }, "ion-color-".concat(color), true) : undefined;
+      }, "ion-color-".concat(color), true), cssClassMap) : cssClassMap;
     };
 
     var getClassList = function getClassList(classes) {
@@ -619,7 +621,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     var SCHEME = /^[a-z][a-z0-9+\-.]*:/;
 
     var openURL = /*#__PURE__*/function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, ev, direction, animation) {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, ev, direction, animation) {
         var router;
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
@@ -655,7 +657,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }));
 
       return function openURL(_x6, _x7, _x8, _x9) {
-        return _ref3.apply(this, arguments);
+        return _ref2.apply(this, arguments);
       };
     }();
     /***/

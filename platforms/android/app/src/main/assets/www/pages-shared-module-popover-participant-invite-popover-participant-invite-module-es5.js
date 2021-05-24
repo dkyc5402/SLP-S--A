@@ -44,13 +44,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       _createClass(Ng2SearchPipe, [{
         key: "transform",
-
+        value:
         /**
          * @param {?} items object from array
          * @param {?} term term's search
          * @return {?}
          */
-        value: function transform(items, term) {
+        function transform(items, term) {
           if (!term || !items) return items;
           return Ng2SearchPipe.filter(items, term);
         }

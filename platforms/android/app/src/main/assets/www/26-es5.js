@@ -1,14 +1,14 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[26], {
   /***/
@@ -39,51 +39,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-44bf8136.js */
-    "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+    var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-7a8b7a1c.js */
+    "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
     /* harmony import */
 
 
-    var _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./ionic-global-837be8f3.js */
-    "./node_modules/@ionic/core/dist/esm/ionic-global-837be8f3.js");
+    var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./ionic-global-63a97a32.js */
+    "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
     /* harmony import */
 
 
-    var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./helpers-5c745fbd.js */
-    "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+    var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./cubic-bezier-eea9a7a9.js */
+    "./node_modules/@ionic/core/dist/esm/cubic-bezier-eea9a7a9.js");
     /* harmony import */
 
 
-    var _animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./animation-a635a2fc.js */
-    "./node_modules/@ionic/core/dist/esm/animation-a635a2fc.js");
+    var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./helpers-dd7e4b7b.js */
+    "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
     /* harmony import */
 
 
-    var _cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./cubic-bezier-685f606a.js */
-    "./node_modules/@ionic/core/dist/esm/cubic-bezier-685f606a.js");
+    var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./haptic-27b3f981.js */
+    "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js");
     /* harmony import */
 
 
-    var _index_79d74e0b_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./index-79d74e0b.js */
-    "./node_modules/@ionic/core/dist/esm/index-79d74e0b.js");
+    var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./animation-096c6391.js */
+    "./node_modules/@ionic/core/dist/esm/animation-096c6391.js");
     /* harmony import */
 
 
-    var _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./haptic-7b8ba70a.js */
-    "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js");
+    var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./index-9e3fe806.js */
+    "./node_modules/@ionic/core/dist/esm/index-9e3fe806.js");
     /* harmony import */
 
 
-    var _spinner_configs_c78e170e_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./spinner-configs-c78e170e.js */
-    "./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js");
+    var _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./spinner-configs-cd7845af.js */
+    "./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js");
 
     var getRefresherAnimationType = function getRefresherAnimationType(contentEl) {
       var previousSibling = contentEl.previousElementSibling;
@@ -91,8 +91,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return hasHeader ? 'translate' : 'scale';
     };
 
-    var createPullingAnimation = function createPullingAnimation(type, pullingSpinner) {
-      return type === 'scale' ? createScaleAnimation(pullingSpinner) : createTranslateAnimation(pullingSpinner);
+    var createPullingAnimation = function createPullingAnimation(type, pullingSpinner, refresherEl) {
+      return type === 'scale' ? createScaleAnimation(pullingSpinner, refresherEl) : createTranslateAnimation(pullingSpinner, refresherEl);
     };
 
     var createBaseAnimation = function createBaseAnimation(pullingRefresherIcon) {
@@ -101,8 +101,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       var spinnerArrowContainer = pullingRefresherIcon.querySelector('.spinner-arrow-container');
       var arrowContainer = pullingRefresherIcon.querySelector('.arrow-container');
       var arrow = arrowContainer ? arrowContainer.querySelector('ion-icon') : null;
-      var baseAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().duration(1000).easing('ease-out');
-      var spinnerArrowContainerAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(spinnerArrowContainer).keyframes([{
+      var baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().duration(1000).easing('ease-out');
+      var spinnerArrowContainerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(spinnerArrowContainer).keyframes([{
         offset: 0,
         opacity: '0.3'
       }, {
@@ -115,7 +115,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         offset: 1,
         opacity: '1'
       }]);
-      var circleInnerAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(circle).keyframes([{
+      var circleInnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(circle).keyframes([{
         offset: 0,
         strokeDasharray: '1px, 200px'
       }, {
@@ -128,7 +128,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         offset: 1,
         strokeDasharray: '100px, 200px'
       }]);
-      var circleOuterAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(spinner).keyframes([{
+      var circleOuterAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(spinner).keyframes([{
         offset: 0,
         transform: 'rotate(-90deg)'
       }, {
@@ -142,7 +142,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
        */
 
       if (arrowContainer && arrow) {
-        var arrowContainerAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(arrowContainer).keyframes([{
+        var arrowContainerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(arrowContainer).keyframes([{
           offset: 0,
           transform: 'rotate(0deg)'
         }, {
@@ -155,7 +155,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           offset: 1,
           transform: 'rotate(400deg)'
         }]);
-        var arrowAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(arrow).keyframes([{
+        var arrowAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(arrow).keyframes([{
           offset: 0,
           transform: 'translateX(2px) scale(0)'
         }, {
@@ -174,11 +174,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return baseAnimation.addAnimation([spinnerArrowContainerAnimation, circleInnerAnimation, circleOuterAnimation]);
     };
 
-    var createScaleAnimation = function createScaleAnimation(pullingRefresherIcon) {
-      var height = pullingRefresherIcon.clientHeight;
-      var spinnerAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(pullingRefresherIcon).keyframes([{
+    var createScaleAnimation = function createScaleAnimation(pullingRefresherIcon, refresherEl) {
+      /**
+       * Do not take the height of the refresher icon
+       * because at this point the DOM has not updated,
+       * so the refresher icon is still hidden with
+       * display: none.
+       * The `ion-refresher` container height
+       * is roughly the amount we need to offset
+       * the icon by when pulling down.
+       */
+      var height = refresherEl.clientHeight;
+      var spinnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(pullingRefresherIcon).keyframes([{
         offset: 0,
-        transform: "scale(0) translateY(-".concat(height + 20, "px)")
+        transform: "scale(0) translateY(-".concat(height, "px)")
       }, {
         offset: 1,
         transform: 'scale(1) translateY(100px)'
@@ -186,11 +195,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return createBaseAnimation(pullingRefresherIcon).addAnimation([spinnerAnimation]);
     };
 
-    var createTranslateAnimation = function createTranslateAnimation(pullingRefresherIcon) {
-      var height = pullingRefresherIcon.clientHeight;
-      var spinnerAnimation = Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().addElement(pullingRefresherIcon).keyframes([{
+    var createTranslateAnimation = function createTranslateAnimation(pullingRefresherIcon, refresherEl) {
+      /**
+       * Do not take the height of the refresher icon
+       * because at this point the DOM has not updated,
+       * so the refresher icon is still hidden with
+       * display: none.
+       * The `ion-refresher` container height
+       * is roughly the amount we need to offset
+       * the icon by when pulling down.
+       */
+      var height = refresherEl.clientHeight;
+      var spinnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().addElement(pullingRefresherIcon).keyframes([{
         offset: 0,
-        transform: "translateY(-".concat(height + 20, "px)")
+        transform: "translateY(-".concat(height, "px)")
       }, {
         offset: 1,
         transform: 'translateY(100px)'
@@ -199,7 +217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     var createSnapBackAnimation = function createSnapBackAnimation(pullingRefresherIcon) {
-      return Object(_animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__["c"])().duration(125).addElement(pullingRefresherIcon).fromTo('transform', 'translateY(var(--ion-pulling-refresher-translate, 100px))', 'translateY(0px)');
+      return Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])().duration(125).addElement(pullingRefresherIcon).fromTo('transform', 'translateY(var(--ion-pulling-refresher-translate, 100px))', 'translateY(0px)');
     }; // iOS Native Refresher
     // -----------------------------
 
@@ -209,7 +227,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     var handleScrollWhilePulling = function handleScrollWhilePulling(spinner, ticks, opacity, currentTickToShow) {
-      Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
         setSpinnerOpacity(spinner, opacity);
         ticks.forEach(function (el, i) {
           return el.style.setProperty('opacity', i <= currentTickToShow ? '0.99' : '0');
@@ -218,7 +236,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     var handleScrollWhileRefreshing = function handleScrollWhileRefreshing(spinner, lastVelocityY) {
-      Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
         // If user pulls down quickly, the spinner should spin faster
         spinner.style.setProperty('--refreshing-rotation-duration', lastVelocityY >= 1.0 ? '0.5s' : '2s');
         spinner.style.setProperty('opacity', '1');
@@ -231,7 +249,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       var trans = transitionEndAsync(el, 200);
-      Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
         el.style.setProperty('transition', '0.2s all ease-out');
 
         if (value === undefined) {
@@ -245,11 +263,45 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     // -----------------------------
 
 
-    var shouldUseNativeRefresher = function shouldUseNativeRefresher(referenceEl, mode) {
-      var pullingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
-      var refreshingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
-      return pullingSpinner !== null && refreshingSpinner !== null && (mode === 'ios' && Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["i"])('mobile') && referenceEl.style.webkitOverflowScrolling !== undefined || mode === 'md');
-    };
+    var shouldUseNativeRefresher = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(referenceEl, mode) {
+        var refresherContent, pullingSpinner, refreshingSpinner;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                refresherContent = referenceEl.querySelector('ion-refresher-content');
+
+                if (refresherContent) {
+                  _context.next = 3;
+                  break;
+                }
+
+                return _context.abrupt("return", Promise.resolve(false));
+
+              case 3:
+                _context.next = 5;
+                return new Promise(function (resolve) {
+                  return Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["c"])(refresherContent, resolve);
+                });
+
+              case 5:
+                pullingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
+                refreshingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
+                return _context.abrupt("return", pullingSpinner !== null && refreshingSpinner !== null && (mode === 'ios' && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') && referenceEl.style.webkitOverflowScrolling !== undefined || mode === 'md'));
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function shouldUseNativeRefresher(_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }();
 
     var transitionEndAsync = function transitionEndAsync(el) {
       var expectedDuration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
@@ -301,16 +353,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     var refresherIosCss = "ion-refresher{left:0;top:0;display:none;position:absolute;width:100%;height:60px;pointer-events:none;z-index:-1}[dir=rtl] ion-refresher,:host-context([dir=rtl]) ion-refresher{left:unset;right:unset;right:0}ion-refresher.refresher-active{display:block}ion-refresher-content{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;height:100%}.refresher-pulling,.refresher-refreshing{display:none;width:100%}.refresher-pulling-icon,.refresher-refreshing-icon{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:200ms;transition:200ms;font-size:30px;text-align:center}[dir=rtl] .refresher-pulling-icon,:host-context([dir=rtl]) .refresher-pulling-icon,[dir=rtl] .refresher-refreshing-icon,:host-context([dir=rtl]) .refresher-refreshing-icon{-webkit-transform-origin:calc(100% - center);transform-origin:calc(100% - center)}.refresher-pulling-text,.refresher-refreshing-text{font-size:16px;text-align:center}ion-refresher-content .arrow-container{display:none}.refresher-pulling ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling-icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.refresher-refreshing ion-refresher-content .refresher-refreshing{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-completing ion-refresher-content .refresher-refreshing{display:block}.refresher-completing ion-refresher-content .refresher-refreshing-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-native .refresher-pulling-text,.refresher-native .refresher-refreshing-text{display:none}.refresher-ios .refresher-pulling-icon,.refresher-ios .refresher-refreshing-icon{color:var(--ion-text-color, #000)}.refresher-ios .refresher-pulling-text,.refresher-ios .refresher-refreshing-text{color:var(--ion-text-color, #000)}.refresher-ios .refresher-refreshing .spinner-lines-ios line,.refresher-ios .refresher-refreshing .spinner-lines-small-ios line,.refresher-ios .refresher-refreshing .spinner-crescent circle{stroke:var(--ion-text-color, #000)}.refresher-ios .refresher-refreshing .spinner-bubbles circle,.refresher-ios .refresher-refreshing .spinner-circles circle,.refresher-ios .refresher-refreshing .spinner-dots circle{fill:var(--ion-text-color, #000)}ion-refresher.refresher-native{display:block;z-index:1}ion-refresher.refresher-native ion-spinner{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native ion-spinner{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}.refresher-native .refresher-refreshing ion-spinner{--refreshing-rotation-duration:2s;display:none;-webkit-animation:var(--refreshing-rotation-duration) ease-out refresher-rotate forwards;animation:var(--refreshing-rotation-duration) ease-out refresher-rotate forwards}.refresher-native .refresher-refreshing{display:none;-webkit-animation:250ms linear refresher-pop forwards;animation:250ms linear refresher-pop forwards}.refresher-native.refresher-refreshing .refresher-pulling ion-spinner,.refresher-native.refresher-completing .refresher-pulling ion-spinner{display:none}.refresher-native.refresher-refreshing .refresher-refreshing ion-spinner,.refresher-native.refresher-completing .refresher-refreshing ion-spinner{display:block}.refresher-native.refresher-pulling .refresher-pulling ion-spinner{display:block}.refresher-native.refresher-pulling .refresher-refreshing ion-spinner{display:none}@-webkit-keyframes refresher-pop{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}50%{-webkit-transform:scale(1.2);transform:scale(1.2);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes refresher-pop{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}50%{-webkit-transform:scale(1.2);transform:scale(1.2);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes refresher-rotate{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}@keyframes refresher-rotate{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}";
-    var refresherMdCss = "ion-refresher{left:0;top:0;display:none;position:absolute;width:100%;height:60px;pointer-events:none;z-index:-1}[dir=rtl] ion-refresher,:host-context([dir=rtl]) ion-refresher{left:unset;right:unset;right:0}ion-refresher.refresher-active{display:block}ion-refresher-content{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;height:100%}.refresher-pulling,.refresher-refreshing{display:none;width:100%}.refresher-pulling-icon,.refresher-refreshing-icon{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:200ms;transition:200ms;font-size:30px;text-align:center}[dir=rtl] .refresher-pulling-icon,:host-context([dir=rtl]) .refresher-pulling-icon,[dir=rtl] .refresher-refreshing-icon,:host-context([dir=rtl]) .refresher-refreshing-icon{-webkit-transform-origin:calc(100% - center);transform-origin:calc(100% - center)}.refresher-pulling-text,.refresher-refreshing-text{font-size:16px;text-align:center}ion-refresher-content .arrow-container{display:none}.refresher-pulling ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling-icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.refresher-refreshing ion-refresher-content .refresher-refreshing{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-completing ion-refresher-content .refresher-refreshing{display:block}.refresher-completing ion-refresher-content .refresher-refreshing-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-native .refresher-pulling-text,.refresher-native .refresher-refreshing-text{display:none}.refresher-md .refresher-pulling-icon,.refresher-md .refresher-refreshing-icon{color:var(--ion-text-color, #000)}.refresher-md .refresher-pulling-text,.refresher-md .refresher-refreshing-text{color:var(--ion-text-color, #000)}.refresher-md .refresher-refreshing .spinner-lines-md line,.refresher-md .refresher-refreshing .spinner-lines-small-md line,.refresher-md .refresher-refreshing .spinner-crescent circle{stroke:var(--ion-text-color, #000)}.refresher-md .refresher-refreshing .spinner-bubbles circle,.refresher-md .refresher-refreshing .spinner-circles circle,.refresher-md .refresher-refreshing .spinner-dots circle{fill:var(--ion-text-color, #000)}ion-refresher.refresher-native{display:block;z-index:1}ion-refresher.refresher-native ion-spinner{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;width:24px;height:24px;color:var(--ion-color-primary, #3880ff)}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native ion-spinner{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}ion-refresher.refresher-native .spinner-arrow-container{display:inherit}ion-refresher.refresher-native .arrow-container{display:block;position:absolute;width:24px;height:24px}ion-refresher.refresher-native .arrow-container ion-icon{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;left:0;right:0;bottom:-4px;position:absolute;color:var(--ion-color-primary, #3880ff);font-size:12px}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .arrow-container ion-icon{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}ion-refresher.refresher-native.refresher-pulling ion-refresher-content .refresher-pulling,ion-refresher.refresher-native.refresher-ready ion-refresher-content .refresher-pulling{display:-ms-flexbox;display:flex}ion-refresher.refresher-native.refresher-refreshing ion-refresher-content .refresher-refreshing,ion-refresher.refresher-native.refresher-completing ion-refresher-content .refresher-refreshing,ion-refresher.refresher-native.refresher-cancelling ion-refresher-content .refresher-refreshing{display:-ms-flexbox;display:flex}ion-refresher.refresher-native .refresher-pulling-icon{-webkit-transform:translateY(calc(-100% - 10px));transform:translateY(calc(-100% - 10px))}ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;border-radius:100%;padding-left:8px;padding-right:8px;padding-top:8px;padding-bottom:8px;display:-ms-flexbox;display:flex;border:1px solid #ececec;background:white;-webkit-box-shadow:0px 1px 6px rgba(0, 0, 0, 0.1);box-shadow:0px 1px 6px rgba(0, 0, 0, 0.1)}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{padding-left:unset;padding-right:unset;-webkit-padding-start:8px;padding-inline-start:8px;-webkit-padding-end:8px;padding-inline-end:8px}}";
+    var refresherMdCss = "ion-refresher{left:0;top:0;display:none;position:absolute;width:100%;height:60px;pointer-events:none;z-index:-1}[dir=rtl] ion-refresher,:host-context([dir=rtl]) ion-refresher{left:unset;right:unset;right:0}ion-refresher.refresher-active{display:block}ion-refresher-content{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;height:100%}.refresher-pulling,.refresher-refreshing{display:none;width:100%}.refresher-pulling-icon,.refresher-refreshing-icon{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:200ms;transition:200ms;font-size:30px;text-align:center}[dir=rtl] .refresher-pulling-icon,:host-context([dir=rtl]) .refresher-pulling-icon,[dir=rtl] .refresher-refreshing-icon,:host-context([dir=rtl]) .refresher-refreshing-icon{-webkit-transform-origin:calc(100% - center);transform-origin:calc(100% - center)}.refresher-pulling-text,.refresher-refreshing-text{font-size:16px;text-align:center}ion-refresher-content .arrow-container{display:none}.refresher-pulling ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling-icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.refresher-refreshing ion-refresher-content .refresher-refreshing{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-completing ion-refresher-content .refresher-refreshing{display:block}.refresher-completing ion-refresher-content .refresher-refreshing-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-native .refresher-pulling-text,.refresher-native .refresher-refreshing-text{display:none}.refresher-md .refresher-pulling-icon,.refresher-md .refresher-refreshing-icon{color:var(--ion-text-color, #000)}.refresher-md .refresher-pulling-text,.refresher-md .refresher-refreshing-text{color:var(--ion-text-color, #000)}.refresher-md .refresher-refreshing .spinner-lines-md line,.refresher-md .refresher-refreshing .spinner-lines-small-md line,.refresher-md .refresher-refreshing .spinner-crescent circle{stroke:var(--ion-text-color, #000)}.refresher-md .refresher-refreshing .spinner-bubbles circle,.refresher-md .refresher-refreshing .spinner-circles circle,.refresher-md .refresher-refreshing .spinner-dots circle{fill:var(--ion-text-color, #000)}ion-refresher.refresher-native{display:block;z-index:1}ion-refresher.refresher-native ion-spinner{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;width:24px;height:24px;color:var(--ion-color-primary, #3880ff)}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native ion-spinner{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}ion-refresher.refresher-native .spinner-arrow-container{display:inherit}ion-refresher.refresher-native .arrow-container{display:block;position:absolute;width:24px;height:24px}ion-refresher.refresher-native .arrow-container ion-icon{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;left:0;right:0;bottom:-4px;position:absolute;color:var(--ion-color-primary, #3880ff);font-size:12px}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .arrow-container ion-icon{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}ion-refresher.refresher-native.refresher-pulling ion-refresher-content .refresher-pulling,ion-refresher.refresher-native.refresher-ready ion-refresher-content .refresher-pulling{display:-ms-flexbox;display:flex}ion-refresher.refresher-native.refresher-refreshing ion-refresher-content .refresher-refreshing,ion-refresher.refresher-native.refresher-completing ion-refresher-content .refresher-refreshing,ion-refresher.refresher-native.refresher-cancelling ion-refresher-content .refresher-refreshing{display:-ms-flexbox;display:flex}ion-refresher.refresher-native .refresher-pulling-icon{-webkit-transform:translateY(calc(-100% - 10px));transform:translateY(calc(-100% - 10px))}ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;border-radius:100%;padding-left:8px;padding-right:8px;padding-top:8px;padding-bottom:8px;display:-ms-flexbox;display:flex;border:1px solid var(--ion-color-step-200, #ececec);background:var(--ion-color-step-250, #ffffff);-webkit-box-shadow:0px 1px 6px rgba(0, 0, 0, 0.1);box-shadow:0px 1px 6px rgba(0, 0, 0, 0.1)}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{margin-left:unset;margin-right:unset;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto}}@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0){ion-refresher.refresher-native .refresher-pulling-icon,ion-refresher.refresher-native .refresher-refreshing-icon{padding-left:unset;padding-right:unset;-webkit-padding-start:8px;padding-inline-start:8px;-webkit-padding-end:8px;padding-inline-end:8px}}";
 
     var Refresher = /*#__PURE__*/function () {
       function Refresher(hostRef) {
         _classCallCheck(this, Refresher);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-        this.ionRefresh = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRefresh", 7);
-        this.ionPull = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPull", 7);
-        this.ionStart = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStart", 7);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        this.ionRefresh = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRefresh", 7);
+        this.ionPull = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPull", 7);
+        this.ionStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStart", 7);
         this.appliedStyles = false;
         this.didStart = false;
         this.progress = 0;
@@ -397,16 +449,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "checkNativeRefresher",
-        value: function checkNativeRefresher() {
-          var useNativeRefresher = shouldUseNativeRefresher(this.el, Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this));
+        value: function () {
+          var _checkNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var useNativeRefresher, contentEl;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return shouldUseNativeRefresher(this.el, Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this));
 
-          if (useNativeRefresher && !this.nativeRefresher) {
-            var contentEl = this.el.closest('ion-content');
-            this.setupNativeRefresher(contentEl);
-          } else if (!useNativeRefresher) {
-            this.destroyNativeRefresher();
+                  case 2:
+                    useNativeRefresher = _context2.sent;
+
+                    if (useNativeRefresher && !this.nativeRefresher) {
+                      contentEl = this.el.closest('ion-content');
+                      this.setupNativeRefresher(contentEl);
+                    } else if (!useNativeRefresher) {
+                      this.destroyNativeRefresher();
+                    }
+
+                  case 4:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
+
+          function checkNativeRefresher() {
+            return _checkNativeRefresher.apply(this, arguments);
           }
-        }
+
+          return checkNativeRefresher;
+        }()
       }, {
         key: "destroyNativeRefresher",
         value: function destroyNativeRefresher() {
@@ -420,27 +496,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "resetNativeRefresher",
         value: function () {
-          var _resetNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(el, state) {
-            return regeneratorRuntime.wrap(function _callee$(_context) {
+          var _resetNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(el, state) {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
-                switch (_context.prev = _context.next) {
+                switch (_context3.prev = _context3.next) {
                   case 0:
                     this.state = state;
 
-                    if (!(Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios')) {
-                      _context.next = 6;
+                    if (!(Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios')) {
+                      _context3.next = 6;
                       break;
                     }
 
-                    _context.next = 4;
+                    _context3.next = 4;
                     return translateElement(el, undefined);
 
                   case 4:
-                    _context.next = 8;
+                    _context3.next = 8;
                     break;
 
                   case 6:
-                    _context.next = 8;
+                    _context3.next = 8;
                     return transitionEndAsync(this.el.querySelector('.refresher-refreshing-icon'), 200);
 
                   case 8:
@@ -458,13 +534,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 15:
                   case "end":
-                    return _context.stop();
+                    return _context3.stop();
                 }
               }
-            }, _callee, this);
+            }, _callee3, this);
           }));
 
-          function resetNativeRefresher(_x, _x2) {
+          function resetNativeRefresher(_x3, _x4) {
             return _resetNativeRefresher.apply(this, arguments);
           }
 
@@ -473,19 +549,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setupiOSNativeRefresher",
         value: function () {
-          var _setupiOSNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(pullingSpinner, refreshingSpinner) {
+          var _setupiOSNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(pullingSpinner, refreshingSpinner) {
             var _this = this;
 
             var ticks, MAX_PULL, NUM_TICKS;
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
               while (1) {
-                switch (_context2.prev = _context2.next) {
+                switch (_context4.prev = _context4.next) {
                   case 0:
                     this.elementToTransform = this.scrollEl;
                     ticks = pullingSpinner.shadowRoot.querySelectorAll('svg');
                     MAX_PULL = this.scrollEl.clientHeight * 0.16;
                     NUM_TICKS = ticks.length;
-                    Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
                       return ticks.forEach(function (el) {
                         return el.style.setProperty('animation', 'none');
                       });
@@ -499,7 +575,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           return;
                         }
 
-                      Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["f"])(function () {
+                      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(function () {
                         // PTR should only be active when overflow scrolling at the top
                         var scrollTop = _this.scrollEl.scrollTop;
                         var refresherHeight = _this.el.clientHeight;
@@ -512,14 +588,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           if (_this.state === 8
                           /* Refreshing */
                           ) {
-                              var ratio = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, scrollTop / (refresherHeight * 0.5), 1);
-                              Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                              var ratio = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, scrollTop / (refresherHeight * 0.5), 1);
+                              Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
                                 return setSpinnerOpacity(refreshingSpinner, 1 - ratio);
                               });
                               return;
                             }
 
-                          Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
                             return setSpinnerOpacity(pullingSpinner, 0);
                           });
                           return;
@@ -539,9 +615,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                         } // delay showing the next tick marks until user has pulled 30px
 
 
-                        var opacity = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, Math.abs(scrollTop) / refresherHeight, 0.99);
-                        var pullAmount = _this.progress = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, (Math.abs(scrollTop) - 30) / MAX_PULL, 1);
-                        var currentTickToShow = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, Math.floor(pullAmount * NUM_TICKS), NUM_TICKS - 1);
+                        var opacity = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, Math.abs(scrollTop) / refresherHeight, 0.99);
+                        var pullAmount = _this.progress = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, (Math.abs(scrollTop) - 30) / MAX_PULL, 1);
+                        var currentTickToShow = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, Math.floor(pullAmount * NUM_TICKS), NUM_TICKS - 1);
                         var shouldShowRefreshingSpinner = _this.state === 8
                         /* Refreshing */
                         || currentTickToShow === NUM_TICKS - 1;
@@ -555,7 +631,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                             _this.beginRefresh();
 
                             _this.didRefresh = true;
-                            Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_6__["d"])({
+                            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_4__["d"])({
                               style: 'light'
                             });
                             /**
@@ -577,16 +653,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     };
 
                     this.scrollEl.addEventListener('scroll', this.scrollListenerCallback);
-                    _context2.next = 9;
+                    _context4.next = 9;
                     return Promise.resolve().then(__webpack_require__.bind(null,
-                    /*! ./index-eea61379.js */
-                    "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                    /*! ./index-f49d994d.js */
+                    "./node_modules/@ionic/core/dist/esm/index-f49d994d.js"));
 
                   case 9:
-                    this.gesture = _context2.sent.createGesture({
+                    this.gesture = _context4.sent.createGesture({
                       el: this.scrollEl,
                       gestureName: 'refresher',
-                      gesturePriority: 10,
+                      gesturePriority: 31,
                       direction: 'y',
                       threshold: 5,
                       onStart: function onStart() {
@@ -594,6 +670,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                         if (!_this.didRefresh) {
                           translateElement(_this.elementToTransform, '0px');
+                        }
+                        /**
+                         * If the content had `display: none` when
+                         * the refresher was initialized, its clientHeight
+                         * will be 0. When the gesture starts, the content
+                         * will be visible, so try to get the correct
+                         * client height again. This is most common when
+                         * using the refresher in an ion-menu.
+                         */
+
+
+                        if (MAX_PULL === 0) {
+                          MAX_PULL = _this.scrollEl.clientHeight * 0.16;
                         }
                       },
                       onMove: function onMove(ev) {
@@ -610,7 +699,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                           _this.needsCompletion = false;
                         } else if (_this.didRefresh) {
-                          Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["f"])(function () {
+                          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(function () {
                             return translateElement(_this.elementToTransform, "".concat(_this.el.clientHeight, "px"));
                           });
                         }
@@ -620,13 +709,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 11:
                   case "end":
-                    return _context2.stop();
+                    return _context4.stop();
                 }
               }
-            }, _callee2, this);
+            }, _callee4, this);
           }));
 
-          function setupiOSNativeRefresher(_x3, _x4) {
+          function setupiOSNativeRefresher(_x5, _x6) {
             return _setupiOSNativeRefresher.apply(this, arguments);
           }
 
@@ -635,20 +724,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setupMDNativeRefresher",
         value: function () {
-          var _setupMDNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(contentEl, pullingSpinner, refreshingSpinner) {
+          var _setupMDNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(contentEl, pullingSpinner, refreshingSpinner) {
             var _this2 = this;
 
             var circle, pullingRefresherIcon, refreshingCircle;
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+            return regeneratorRuntime.wrap(function _callee6$(_context6) {
               while (1) {
-                switch (_context4.prev = _context4.next) {
+                switch (_context6.prev = _context6.next) {
                   case 0:
-                    circle = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["g"])(pullingSpinner).querySelector('circle');
+                    circle = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(pullingSpinner).querySelector('circle');
                     pullingRefresherIcon = this.el.querySelector('ion-refresher-content .refresher-pulling-icon');
-                    refreshingCircle = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["g"])(refreshingSpinner).querySelector('circle');
+                    refreshingCircle = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(refreshingSpinner).querySelector('circle');
 
                     if (circle !== null && refreshingCircle !== null) {
-                      Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
                         circle.style.setProperty('animation', 'none'); // This lines up the animation on the refreshing spinner with the pulling spinner
 
                         refreshingSpinner.style.setProperty('animation-delay', '-655ms');
@@ -656,16 +745,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       });
                     }
 
-                    _context4.next = 6;
+                    _context6.next = 6;
                     return Promise.resolve().then(__webpack_require__.bind(null,
-                    /*! ./index-eea61379.js */
-                    "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                    /*! ./index-f49d994d.js */
+                    "./node_modules/@ionic/core/dist/esm/index-f49d994d.js"));
 
                   case 6:
-                    this.gesture = _context4.sent.createGesture({
+                    this.gesture = _context6.sent.createGesture({
                       el: this.scrollEl,
                       gestureName: 'refresher',
-                      gesturePriority: 10,
+                      gesturePriority: 31,
                       direction: 'y',
                       threshold: 5,
                       canStart: function canStart() {
@@ -693,24 +782,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           _this2.state = 2
                           /* Pulling */
                           ;
-                          Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
-                            var animationType = getRefresherAnimationType(contentEl);
-                            var animation = createPullingAnimation(animationType, pullingRefresherIcon);
-                            ev.data.animation = animation;
-
-                            _this2.scrollEl.style.setProperty('--overflow', 'hidden');
-
-                            animation.progressStart(false, 0);
-
-                            _this2.ionStart.emit();
-
-                            _this2.animations.push(animation);
+                          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                            return _this2.scrollEl.style.setProperty('--overflow', 'hidden');
                           });
+                          var animationType = getRefresherAnimationType(contentEl);
+                          var animation = createPullingAnimation(animationType, pullingRefresherIcon, _this2.el);
+                          ev.data.animation = animation;
+                          animation.progressStart(false, 0);
+
+                          _this2.ionStart.emit();
+
+                          _this2.animations.push(animation);
+
                           return;
                         } // Since we are using an easing curve, slow the gesture tracking down a bit
 
 
-                        _this2.progress = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, ev.deltaY / 180 * 0.5, 1);
+                        _this2.progress = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, ev.deltaY / 180 * 0.5, 1);
                         ev.data.animation.progressStep(_this2.progress);
 
                         _this2.ionPull.emit();
@@ -720,7 +808,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           return;
                         }
 
-                        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+                        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
                           return _this2.scrollEl.style.removeProperty('--overflow');
                         });
 
@@ -743,19 +831,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           return;
                         }
 
-                        var progress = Object(_cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__["g"])([0, 0], [0, 0], [1, 1], [1, 1], _this2.progress)[0];
+                        var progress = Object(_cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__["g"])([0, 0], [0, 0], [1, 1], [1, 1], _this2.progress)[0];
                         var snapBackAnimation = createSnapBackAnimation(pullingRefresherIcon);
 
                         _this2.animations.push(snapBackAnimation);
 
-                        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-                          return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+                          return regeneratorRuntime.wrap(function _callee5$(_context5) {
                             while (1) {
-                              switch (_context3.prev = _context3.next) {
+                              switch (_context5.prev = _context5.next) {
                                 case 0:
                                   pullingRefresherIcon.style.setProperty('--ion-pulling-refresher-translate', "".concat(progress * 100, "px"));
                                   ev.data.animation.progressEnd();
-                                  _context3.next = 4;
+                                  _context5.next = 4;
                                   return snapBackAnimation.play();
 
                                 case 4:
@@ -765,10 +853,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                                 case 6:
                                 case "end":
-                                  return _context3.stop();
+                                  return _context5.stop();
                               }
                             }
-                          }, _callee3);
+                          }, _callee5);
                         })));
                       }
                     });
@@ -776,13 +864,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 8:
                   case "end":
-                    return _context4.stop();
+                    return _context6.stop();
                 }
               }
-            }, _callee4, this);
+            }, _callee6, this);
           }));
 
-          function setupMDNativeRefresher(_x5, _x6, _x7) {
+          function setupMDNativeRefresher(_x7, _x8, _x9) {
             return _setupMDNativeRefresher.apply(this, arguments);
           }
 
@@ -791,42 +879,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setupNativeRefresher",
         value: function () {
-          var _setupNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(contentEl) {
+          var _setupNativeRefresher = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(contentEl) {
             var pullingSpinner, refreshingSpinner;
-            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
-                switch (_context5.prev = _context5.next) {
+                switch (_context7.prev = _context7.next) {
                   case 0:
                     if (!(this.scrollListenerCallback || !contentEl || this.nativeRefresher || !this.scrollEl)) {
-                      _context5.next = 2;
+                      _context7.next = 2;
                       break;
                     }
 
-                    return _context5.abrupt("return");
+                    return _context7.abrupt("return");
 
                   case 2:
+                    /**
+                     * If using non-native refresher before make sure
+                     * we clean up any old CSS. This can happen when
+                     * a user manually calls the refresh method in a
+                     * component create callback before the native
+                     * refresher is setup.
+                     */
+                    this.setCss(0, '', false, '');
                     this.nativeRefresher = true;
                     pullingSpinner = this.el.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
                     refreshingSpinner = this.el.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
-                    _context5.next = 7;
-                    return contentEl.componentOnReady();
 
-                  case 7:
-                    if (Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
+                    if (Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
                       this.setupiOSNativeRefresher(pullingSpinner, refreshingSpinner);
                     } else {
                       this.setupMDNativeRefresher(contentEl, pullingSpinner, refreshingSpinner);
                     }
 
-                  case 8:
+                  case 7:
                   case "end":
-                    return _context5.stop();
+                    return _context7.stop();
                 }
               }
-            }, _callee5, this);
+            }, _callee7, this);
           }));
 
-          function setupNativeRefresher(_x8) {
+          function setupNativeRefresher(_x10) {
             return _setupNativeRefresher.apply(this, arguments);
           }
 
@@ -840,61 +933,70 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "connectedCallback",
         value: function () {
-          var _connectedCallback = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+          var _connectedCallback = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
             var _this3 = this;
 
             var contentEl;
-            return regeneratorRuntime.wrap(function _callee6$(_context6) {
+            return regeneratorRuntime.wrap(function _callee8$(_context8) {
               while (1) {
-                switch (_context6.prev = _context6.next) {
+                switch (_context8.prev = _context8.next) {
                   case 0:
                     if (!(this.el.getAttribute('slot') !== 'fixed')) {
-                      _context6.next = 3;
+                      _context8.next = 3;
                       break;
                     }
 
                     console.error('Make sure you use: <ion-refresher slot="fixed">');
-                    return _context6.abrupt("return");
+                    return _context8.abrupt("return");
 
                   case 3:
                     contentEl = this.el.closest('ion-content');
 
                     if (contentEl) {
-                      _context6.next = 7;
+                      _context8.next = 7;
                       break;
                     }
 
                     console.error('<ion-refresher> must be used inside an <ion-content>');
-                    return _context6.abrupt("return");
+                    return _context8.abrupt("return");
 
                   case 7:
-                    _context6.next = 9;
-                    return contentEl.getScrollElement();
+                    _context8.next = 9;
+                    return new Promise(function (resolve) {
+                      return Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["c"])(contentEl, resolve);
+                    });
 
                   case 9:
-                    this.scrollEl = _context6.sent;
-                    this.backgroundContentEl = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["g"])(contentEl).querySelector('#background-content');
+                    _context8.next = 11;
+                    return contentEl.getScrollElement();
 
-                    if (!shouldUseNativeRefresher(this.el, Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this))) {
-                      _context6.next = 15;
+                  case 11:
+                    this.scrollEl = _context8.sent;
+                    this.backgroundContentEl = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(contentEl).querySelector('#background-content');
+                    _context8.next = 15;
+                    return shouldUseNativeRefresher(this.el, Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this));
+
+                  case 15:
+                    if (!_context8.sent) {
+                      _context8.next = 19;
                       break;
                     }
 
                     this.setupNativeRefresher(contentEl);
-                    _context6.next = 19;
+                    _context8.next = 23;
                     break;
 
-                  case 15:
-                    _context6.next = 17;
+                  case 19:
+                    _context8.next = 21;
                     return Promise.resolve().then(__webpack_require__.bind(null,
-                    /*! ./index-eea61379.js */
-                    "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                    /*! ./index-f49d994d.js */
+                    "./node_modules/@ionic/core/dist/esm/index-f49d994d.js"));
 
-                  case 17:
-                    this.gesture = _context6.sent.createGesture({
+                  case 21:
+                    this.gesture = _context8.sent.createGesture({
                       el: contentEl,
                       gestureName: 'refresher',
-                      gesturePriority: 10,
+                      gesturePriority: 31,
                       direction: 'y',
                       threshold: 20,
                       passive: false,
@@ -913,12 +1015,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     });
                     this.disabledChanged();
 
-                  case 19:
+                  case 23:
                   case "end":
-                    return _context6.stop();
+                    return _context8.stop();
                 }
               }
-            }, _callee6, this);
+            }, _callee8, this);
           }));
 
           function connectedCallback() {
@@ -951,19 +1053,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "complete",
         value: function () {
-          var _complete = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+          var _complete = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
             var _this4 = this;
 
-            return regeneratorRuntime.wrap(function _callee7$(_context7) {
+            return regeneratorRuntime.wrap(function _callee9$(_context9) {
               while (1) {
-                switch (_context7.prev = _context7.next) {
+                switch (_context9.prev = _context9.next) {
                   case 0:
                     if (this.nativeRefresher) {
                       this.needsCompletion = true; // Do not reset scroll el until user removes pointer from screen
 
                       if (!this.pointerDown) {
-                        Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["r"])(function () {
-                          return Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["r"])(function () {
+                        Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(function () {
+                          return Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(function () {
                             return _this4.resetNativeRefresher(_this4.elementToTransform, 32
                             /* Completing */
                             );
@@ -978,10 +1080,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 1:
                   case "end":
-                    return _context7.stop();
+                    return _context9.stop();
                 }
               }
-            }, _callee7, this);
+            }, _callee9, this);
           }));
 
           function complete() {
@@ -997,18 +1099,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "cancel",
         value: function () {
-          var _cancel = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+          var _cancel = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
             var _this5 = this;
 
-            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+            return regeneratorRuntime.wrap(function _callee10$(_context10) {
               while (1) {
-                switch (_context8.prev = _context8.next) {
+                switch (_context10.prev = _context10.next) {
                   case 0:
                     if (this.nativeRefresher) {
                       // Do not reset scroll el until user removes pointer from screen
                       if (!this.pointerDown) {
-                        Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["r"])(function () {
-                          return Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["r"])(function () {
+                        Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(function () {
+                          return Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(function () {
                             return _this5.resetNativeRefresher(_this5.elementToTransform, 16
                             /* Cancelling */
                             );
@@ -1023,10 +1125,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 1:
                   case "end":
-                    return _context8.stop();
+                    return _context10.stop();
                 }
               }
-            }, _callee8, this);
+            }, _callee10, this);
           }));
 
           function cancel() {
@@ -1259,7 +1361,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           this.appliedStyles = y > 0;
-          Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
             if (_this7.scrollEl && _this7.backgroundContentEl) {
               var scrollStyle = _this7.scrollEl.style;
               var backgroundStyle = _this7.backgroundContentEl.style;
@@ -1275,8 +1377,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function render() {
           var _class;
 
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             slot: "fixed",
             "class": (_class = {}, _defineProperty(_class, mode, true), _defineProperty(_class, "refresher-".concat(mode), true), _defineProperty(_class, 'refresher-native', this.nativeRefresher), _defineProperty(_class, 'refresher-active', this.state !== 1), _defineProperty(_class, 'refresher-pulling', this.state === 2), _defineProperty(_class, 'refresher-ready', this.state === 4), _defineProperty(_class, 'refresher-refreshing', this.state === 8), _defineProperty(_class, 'refresher-cancelling', this.state === 16), _defineProperty(_class, 'refresher-completing', this.state === 32), _class)
           });
@@ -1284,7 +1386,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }], [{
         key: "watchers",
@@ -1307,68 +1409,68 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function RefresherContent(hostRef) {
         _classCallCheck(this, RefresherContent);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
       }
 
       _createClass(RefresherContent, [{
         key: "componentWillLoad",
         value: function componentWillLoad() {
           if (this.pullingIcon === undefined) {
-            var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
             var overflowRefresher = this.el.style.webkitOverflowScrolling !== undefined ? 'lines' : 'arrow-down';
-            this.pullingIcon = _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingIcon', mode === 'ios' && Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["i"])('mobile') ? _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', overflowRefresher) : 'circular');
+            this.pullingIcon = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingIcon', mode === 'ios' && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') ? _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', overflowRefresher) : 'circular');
           }
 
           if (this.refreshingSpinner === undefined) {
-            var _mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            var _mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
 
-            this.refreshingSpinner = _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingSpinner', _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', _mode === 'ios' ? 'lines' : 'circular'));
+            this.refreshingSpinner = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingSpinner', _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', _mode === 'ios' ? 'lines' : 'circular'));
           }
         }
       }, {
         key: "render",
         value: function render() {
           var pullingIcon = this.pullingIcon;
-          var hasSpinner = pullingIcon != null && _spinner_configs_c78e170e_js__WEBPACK_IMPORTED_MODULE_7__["S"][pullingIcon] !== undefined;
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          var hasSpinner = pullingIcon != null && _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_7__["S"][pullingIcon] !== undefined;
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             "class": mode
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-pulling"
-          }, this.pullingIcon && hasSpinner && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, this.pullingIcon && hasSpinner && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-pulling-icon"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "spinner-arrow-container"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", {
             name: this.pullingIcon,
             paused: true
-          }), mode === 'md' && this.pullingIcon === 'circular' && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }), mode === 'md' && this.pullingIcon === 'circular' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "arrow-container"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
             name: "caret-back-sharp"
-          })))), this.pullingIcon && !hasSpinner && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          })))), this.pullingIcon && !hasSpinner && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-pulling-icon"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
             icon: this.pullingIcon,
             lazy: false
-          })), this.pullingText && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          })), this.pullingText && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-pulling-text",
-            innerHTML: Object(_index_79d74e0b_js__WEBPACK_IMPORTED_MODULE_5__["s"])(this.pullingText)
-          })), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__["s"])(this.pullingText)
+          })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-refreshing"
-          }, this.refreshingSpinner && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, this.refreshingSpinner && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-refreshing-icon"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", {
             name: this.refreshingSpinner
-          })), this.refreshingText && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          })), this.refreshingText && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "refresher-refreshing-text",
-            innerHTML: Object(_index_79d74e0b_js__WEBPACK_IMPORTED_MODULE_5__["s"])(this.refreshingText)
+            innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__["s"])(this.refreshingText)
           })));
         }
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }]);
 

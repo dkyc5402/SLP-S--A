@@ -35,27 +35,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-44bf8136.js */
-    "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+    var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-7a8b7a1c.js */
+    "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
     /* harmony import */
 
 
-    var _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./ionic-global-837be8f3.js */
-    "./node_modules/@ionic/core/dist/esm/ionic-global-837be8f3.js");
+    var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./ionic-global-63a97a32.js */
+    "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
     /* harmony import */
 
 
-    var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./helpers-5c745fbd.js */
-    "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+    var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./helpers-dd7e4b7b.js */
+    "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
     /* harmony import */
 
 
-    var _theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./theme-3f0b0c04.js */
-    "./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js");
+    var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./theme-ff3fc52f.js */
+    "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
 
     var CACHED_MAP;
 
@@ -110,7 +110,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         return url;
       }
 
-      return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["k"])("svg/".concat(iconName, ".svg"));
+      return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["k"])("svg/".concat(iconName, ".svg"));
     };
 
     var getName = function getName(iconName, icon, mode, ios, md) {
@@ -179,12 +179,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _classCallCheck(this, Button);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-        this.ionFocus = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
-        this.ionBlur = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        this.ionFocus = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
+        this.ionBlur = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
         this.inItem = false;
         this.inListHeader = false;
         this.inToolbar = false;
+        this.inheritedAttributes = {};
         /**
          * The type of button.
          */
@@ -214,8 +215,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.handleClick = function (ev) {
           if (_this.type === 'button') {
-            Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_3__["o"])(_this.href, ev, _this.routerDirection, _this.routerAnimation);
-          } else if (Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["h"])(_this.el)) {
+            Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["o"])(_this.href, ev, _this.routerDirection, _this.routerAnimation);
+          } else if (Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["k"])(_this.el)) {
             // this button wants to specifically submit a form
             // climb up the dom to see if we're in a <form>
             // and if so, then use JS to submit it
@@ -248,13 +249,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.inToolbar = !!this.el.closest('ion-buttons');
           this.inListHeader = !!this.el.closest('ion-list-header');
           this.inItem = !!this.el.closest('ion-item') || !!this.el.closest('ion-item-divider');
+          this.inheritedAttributes = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["i"])(this.el, ['aria-label']);
+        }
+      }, {
+        key: "hasIconOnly",
+        get: function get() {
+          return !!this.el.querySelector('[slot="icon-only"]');
+        }
+      }, {
+        key: "rippleType",
+        get: function get() {
+          var hasClearFill = this.fill === undefined || this.fill === 'clear'; // If the button is in a toolbar, has a clear fill (which is the default)
+          // and only has an icon we use the unbounded "circular" ripple effect
+
+          if (hasClearFill && this.hasIconOnly && this.inToolbar) {
+            return 'unbounded';
+          }
+
+          return 'bounded';
         }
       }, {
         key: "render",
         value: function render() {
-          var _Object$assign;
+          var _Object;
 
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
           var buttonType = this.buttonType,
               type = this.type,
               disabled = this.disabled,
@@ -266,7 +285,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               expand = this.expand,
               hasIconOnly = this.hasIconOnly,
               shape = this.shape,
-              strong = this.strong;
+              strong = this.strong,
+              inheritedAttributes = this.inheritedAttributes;
           var finalSize = size === undefined && this.inItem ? 'small' : size;
           var TagType = href === undefined ? 'button' : 'a';
           var attrs = TagType === 'button' ? {
@@ -283,49 +303,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             fill = this.inToolbar || this.inListHeader ? 'clear' : 'solid';
           }
 
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             onClick: this.handleClick,
             "aria-disabled": disabled ? 'true' : null,
-            "class": Object.assign(Object.assign({}, Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color)), (_Object$assign = {}, _defineProperty(_Object$assign, mode, true), _defineProperty(_Object$assign, buttonType, true), _defineProperty(_Object$assign, "".concat(buttonType, "-").concat(expand), expand !== undefined), _defineProperty(_Object$assign, "".concat(buttonType, "-").concat(finalSize), finalSize !== undefined), _defineProperty(_Object$assign, "".concat(buttonType, "-").concat(shape), shape !== undefined), _defineProperty(_Object$assign, "".concat(buttonType, "-").concat(fill), true), _defineProperty(_Object$assign, "".concat(buttonType, "-strong"), strong), _defineProperty(_Object$assign, 'in-toolbar', Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_3__["h"])('ion-toolbar', this.el)), _defineProperty(_Object$assign, 'in-toolbar-color', Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_3__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object$assign, 'button-has-icon-only', hasIconOnly), _defineProperty(_Object$assign, 'button-disabled', disabled), _defineProperty(_Object$assign, 'ion-activatable', true), _defineProperty(_Object$assign, 'ion-focusable', true), _Object$assign))
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(TagType, Object.assign({}, attrs, {
+            "class": Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, buttonType, true), _defineProperty(_Object, "".concat(buttonType, "-").concat(expand), expand !== undefined), _defineProperty(_Object, "".concat(buttonType, "-").concat(finalSize), finalSize !== undefined), _defineProperty(_Object, "".concat(buttonType, "-").concat(shape), shape !== undefined), _defineProperty(_Object, "".concat(buttonType, "-").concat(fill), true), _defineProperty(_Object, "".concat(buttonType, "-strong"), strong), _defineProperty(_Object, 'in-toolbar', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["h"])('ion-toolbar', this.el)), _defineProperty(_Object, 'in-toolbar-color', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object, 'button-has-icon-only', hasIconOnly), _defineProperty(_Object, 'button-disabled', disabled), _defineProperty(_Object, 'ion-activatable', true), _defineProperty(_Object, 'ion-focusable', true), _Object))
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(TagType, Object.assign({}, attrs, {
             "class": "button-native",
             part: "native",
             disabled: disabled,
             onFocus: this.onFocus,
             onBlur: this.onBlur
-          }), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
+          }, inheritedAttributes), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
             "class": "button-inner"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
             name: "icon-only"
-          }), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
+          }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
             name: "start"
-          }), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
+          }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
             name: "end"
-          })), mode === 'md' && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
+          })), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
             type: this.rippleType
           })));
         }
       }, {
-        key: "hasIconOnly",
-        get: function get() {
-          return !!this.el.querySelector('ion-icon[slot="icon-only"]');
-        }
-      }, {
-        key: "rippleType",
-        get: function get() {
-          var hasClearFill = this.fill === undefined || this.fill === 'clear'; // If the button is in a toolbar, has a clear fill (which is the default)
-          // and only has an icon we use the unbounded "circular" ripple effect
-
-          if (hasClearFill && this.hasIconOnly && this.inToolbar) {
-            return 'unbounded';
-          }
-
-          return 'bounded';
-        }
-      }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }]);
 
@@ -338,28 +341,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     var validateContent = function validateContent(svgContent) {
-      if (svgContent && typeof document !== 'undefined') {
-        var div = document.createElement('div');
-        div.innerHTML = svgContent; // setup this way to ensure it works on our buddy IE
+      var div = document.createElement('div');
+      div.innerHTML = svgContent; // setup this way to ensure it works on our buddy IE
 
-        for (var i = div.childNodes.length - 1; i >= 0; i--) {
-          if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
-            div.removeChild(div.childNodes[i]);
-          }
-        } // must only have 1 root element
+      for (var i = div.childNodes.length - 1; i >= 0; i--) {
+        if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
+          div.removeChild(div.childNodes[i]);
+        }
+      } // must only have 1 root element
 
 
-        var svgElm = div.firstElementChild;
+      var svgElm = div.firstElementChild;
 
-        if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
-          var svgClass = svgElm.getAttribute('class') || '';
-          svgElm.setAttribute('class', (svgClass + ' s-ion-icon').trim()); // root element must be an svg
-          // lets double check we've got valid elements
-          // do not allow scripts
+      if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
+        var svgClass = svgElm.getAttribute('class') || '';
+        svgElm.setAttribute('class', (svgClass + ' s-ion-icon').trim()); // root element must be an svg
+        // lets double check we've got valid elements
+        // do not allow scripts
 
-          if (isValid(svgElm)) {
-            return div.innerHTML;
-          }
+        if (isValid(svgElm)) {
+          return div.innerHTML;
         }
       }
 
@@ -393,17 +394,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var ioniconContent = new Map();
     var requests = new Map();
 
-    var getSvgContent = function getSvgContent(url) {
+    var getSvgContent = function getSvgContent(url, sanitize) {
       // see if we already have a request for this url
       var req = requests.get(url);
 
       if (!req) {
-        if (typeof fetch !== 'undefined') {
+        if (typeof fetch !== 'undefined' && typeof document !== 'undefined') {
           // we don't already have a request
           req = fetch(url).then(function (rsp) {
             if (rsp.ok) {
               return rsp.text().then(function (svgContent) {
-                ioniconContent.set(url, validateContent(svgContent));
+                if (svgContent && sanitize !== false) {
+                  svgContent = validateContent(svgContent);
+                }
+
+                ioniconContent.set(url, svgContent || '');
               });
             }
 
@@ -427,7 +432,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function Icon(hostRef) {
         _classCallCheck(this, Icon);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        this.iconName = null;
         this.isVisible = false;
         /**
          * The mode determines which platform styles to use.
@@ -440,6 +446,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
          */
 
         this.lazy = false;
+        /**
+         * When set to `false`, SVG content that is HTTP fetched will not be checked
+         * if the response SVG content has any `<script>` elements, or any attributes
+         * that start with `on`, such as `onclick`.
+         * @default true
+         */
+
+        this.sanitize = true;
       }
 
       _createClass(Icon, [{
@@ -500,17 +514,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 this.svgContent = ioniconContent.get(url);
               } else {
                 // async if it hasn't been loaded
-                getSvgContent(url).then(function () {
+                getSvgContent(url, this.sanitize).then(function () {
                   return _this4.svgContent = ioniconContent.get(url);
                 });
               }
             }
           }
 
-          if (!this.ariaLabel) {
-            var label = getName(this.name, this.icon, this.mode, this.ios, this.md); // user did not provide a label
-            // come up with the label based on the icon name
+          var label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
 
+          if (!this.ariaLabel && this.ariaHidden !== 'true') {
+            // user did not provide a label
+            // come up with the label based on the icon name
             if (label) {
               this.ariaLabel = label.replace(/\-/g, ' ');
             }
@@ -519,24 +534,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "render",
         value: function render() {
-          var _Object$assign3;
+          var _Object$assign2;
 
+          var iconName = this.iconName;
           var mode = this.mode || 'md';
-          var flipRtl = this.flipRtl || this.ariaLabel && (this.ariaLabel.indexOf('arrow') > -1 || this.ariaLabel.indexOf('chevron') > -1) && this.flipRtl !== false;
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          var flipRtl = this.flipRtl || iconName && (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) && this.flipRtl !== false;
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             role: "img",
-            "class": Object.assign(Object.assign(_defineProperty({}, mode, true), createColorClasses(this.color)), (_Object$assign3 = {}, _defineProperty(_Object$assign3, "icon-".concat(this.size), !!this.size), _defineProperty(_Object$assign3, 'flip-rtl', !!flipRtl && this.el.ownerDocument.dir === 'rtl'), _Object$assign3))
-          }, this.svgContent ? Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            "class": Object.assign(Object.assign(_defineProperty({}, mode, true), createColorClasses(this.color)), (_Object$assign2 = {}, _defineProperty(_Object$assign2, "icon-".concat(this.size), !!this.size), _defineProperty(_Object$assign2, 'flip-rtl', !!flipRtl && this.el.ownerDocument.dir === 'rtl'), _Object$assign2))
+          }, this.svgContent ? Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "icon-inner",
             innerHTML: this.svgContent
-          }) : Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }) : Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "icon-inner"
           }));
         }
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }], [{
         key: "assetsDirs",

@@ -45,57 +45,57 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-44bf8136.js */
-    "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+    var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-7a8b7a1c.js */
+    "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
     /* harmony import */
 
 
-    var _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./ionic-global-837be8f3.js */
-    "./node_modules/@ionic/core/dist/esm/ionic-global-837be8f3.js");
+    var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./ionic-global-63a97a32.js */
+    "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
     /* harmony import */
 
 
-    var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./helpers-5c745fbd.js */
-    "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+    var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./cubic-bezier-eea9a7a9.js */
+    "./node_modules/@ionic/core/dist/esm/cubic-bezier-eea9a7a9.js");
     /* harmony import */
 
 
-    var _animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./animation-a635a2fc.js */
-    "./node_modules/@ionic/core/dist/esm/animation-a635a2fc.js");
+    var _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./gesture-controller-31cb6bb9.js */
+    "./node_modules/@ionic/core/dist/esm/gesture-controller-31cb6bb9.js");
     /* harmony import */
 
 
-    var _cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./cubic-bezier-685f606a.js */
-    "./node_modules/@ionic/core/dist/esm/cubic-bezier-685f606a.js");
+    var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./helpers-dd7e4b7b.js */
+    "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
     /* harmony import */
 
 
-    var _gesture_controller_89173521_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./gesture-controller-89173521.js */
-    "./node_modules/@ionic/core/dist/esm/gesture-controller-89173521.js");
+    var _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./index-0d58a5bf.js */
+    "./node_modules/@ionic/core/dist/esm/index-0d58a5bf.js");
     /* harmony import */
 
 
-    var _hardware_back_button_7b6ede21_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./hardware-back-button-7b6ede21.js */
-    "./node_modules/@ionic/core/dist/esm/hardware-back-button-7b6ede21.js");
+    var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./theme-ff3fc52f.js */
+    "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
     /* harmony import */
 
 
-    var _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./index-a8b25bef.js */
-    "./node_modules/@ionic/core/dist/esm/index-a8b25bef.js");
+    var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./hardware-back-button-4a6b37fb.js */
+    "./node_modules/@ionic/core/dist/esm/hardware-back-button-4a6b37fb.js");
     /* harmony import */
 
 
-    var _theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! ./theme-3f0b0c04.js */
-    "./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js");
+    var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./animation-096c6391.js */
+    "./node_modules/@ionic/core/dist/esm/animation-096c6391.js");
 
     var menuIosCss = ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color, #fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,  0,  0);transform:translate3d(-9999px,  0,  0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{left:unset;right:unset;left:auto;right:0}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{-webkit-transform:translate3d(calc(-1 * -9999px),  0,  0);transform:translate3d(calc(-1 * -9999px),  0,  0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto;}ion-backdrop{display:none;opacity:0.01;z-index:-1}@media (max-width: 340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translate3d(0,  0,  0);transform:translate3d(0,  0,  0)}:host(.menu-type-overlay){z-index:1000}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible){width:var(--width);min-width:var(--min-width);max-width:var(--max-width)}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none !important;transform:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}:host(.menu-pane-visible) ion-backdrop{display:hidden !important;}:host(.menu-type-push){z-index:1000}:host(.menu-type-push) .show-backdrop{display:block}";
     var menuMdCss = ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color, #fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,  0,  0);transform:translate3d(-9999px,  0,  0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{left:unset;right:unset;left:auto;right:0}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{-webkit-transform:translate3d(calc(-1 * -9999px),  0,  0);transform:translate3d(calc(-1 * -9999px),  0,  0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto;}ion-backdrop{display:none;opacity:0.01;z-index:-1}@media (max-width: 340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translate3d(0,  0,  0);transform:translate3d(0,  0,  0)}:host(.menu-type-overlay){z-index:1000}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible){width:var(--width);min-width:var(--min-width);max-width:var(--max-width)}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none !important;transform:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}:host(.menu-pane-visible) ion-backdrop{display:hidden !important;}:host(.menu-type-overlay) .menu-inner{-webkit-box-shadow:4px 0px 16px rgba(0, 0, 0, 0.18);box-shadow:4px 0px 16px rgba(0, 0, 0, 0.18)}";
@@ -108,14 +108,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function Menu(hostRef) {
         _classCallCheck(this, Menu);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-        this.ionWillOpen = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillOpen", 7);
-        this.ionWillClose = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillClose", 7);
-        this.ionDidOpen = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidOpen", 7);
-        this.ionDidClose = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidClose", 7);
-        this.ionMenuChange = Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionMenuChange", 7);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        this.ionWillOpen = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillOpen", 7);
+        this.ionWillClose = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillClose", 7);
+        this.ionDidOpen = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidOpen", 7);
+        this.ionDidClose = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidClose", 7);
+        this.ionMenuChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionMenuChange", 7);
         this.lastOnEnd = 0;
-        this.blocker = _gesture_controller_89173521_js__WEBPACK_IMPORTED_MODULE_5__["G"].createBlocker({
+        this.blocker = _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_3__["G"].createBlocker({
           disableScroll: true
         });
         this.isAnimating = false;
@@ -178,7 +178,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "sideChanged",
         value: function sideChanged() {
-          this.isEndSide = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["i"])(this.side);
+          this.isEndSide = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["m"])(this.side);
         }
       }, {
         key: "swipeGestureChanged",
@@ -197,7 +197,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 switch (_context.prev = _context.next) {
                   case 0:
                     if (this.type === undefined) {
-                      this.type = _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuType', 'overlay');
+                      this.type = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuType', 'overlay');
                     }
 
                     el = this.el;
@@ -225,12 +225,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     this.typeChanged(this.type, undefined);
                     this.sideChanged(); // register this menu with the app's menu controller
 
-                    _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._register(this);
+                    _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._register(this);
 
                     _context.next = 15;
                     return Promise.resolve().then(__webpack_require__.bind(null,
-                    /*! ./index-eea61379.js */
-                    "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                    /*! ./index-f49d994d.js */
+                    "./node_modules/@ionic/core/dist/esm/index-f49d994d.js"));
 
                   case 15:
                     this.gesture = _context.sent.createGesture({
@@ -304,7 +304,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function disconnectedCallback() {
           this.blocker.destroy();
 
-          _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._unregister(this);
+          _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._unregister(this);
 
           if (this.animation) {
             this.animation.destroy();
@@ -400,7 +400,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "setOpen",
         value: function setOpen(shouldOpen) {
           var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-          return _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._setOpen(this, shouldOpen, animated);
+          return _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._setOpen(this, shouldOpen, animated);
         }
       }, {
         key: "_setOpen",
@@ -478,12 +478,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
                     _context4.next = 7;
-                    return _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._createAnimation(this.type, this);
+                    return _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._createAnimation(this.type, this);
 
                   case 7:
                     this.animation = _context4.sent;
 
-                    if (!_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true)) {
+                    if (!_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true)) {
                       this.animation.duration(0);
                     }
 
@@ -513,7 +513,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 switch (_context5.prev = _context5.next) {
                   case 0:
                     isReversed = !shouldOpen;
-                    mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+                    mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
                     easing = mode === 'ios' ? iosEasing : mdEasing;
                     easingReverse = mode === 'ios' ? iosEasingReverse : mdEasingReverse;
                     ani = this.animation.direction(isReversed ? 'reverse' : 'normal').easing(isReversed ? easingReverse : easing).onFinish(function () {
@@ -575,7 +575,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           if (this._isOpen) {
             return true; // TODO error
-          } else if (_index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._getOpenSync()) {
+          } else if (_index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._getOpenSync()) {
             return false;
           }
 
@@ -591,7 +591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "onStart",
         value: function onStart() {
           if (!this.isAnimating || !this.animation) {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+            Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(false, 'isAnimating has to be true');
             return;
           } // the cloned animation should not use an easing curve during seek
 
@@ -602,7 +602,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "onMove",
         value: function onMove(detail) {
           if (!this.isAnimating || !this.animation) {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+            Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(false, 'isAnimating has to be true');
             return;
           }
 
@@ -616,7 +616,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this2 = this;
 
           if (!this.isAnimating || !this.animation) {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+            Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(false, 'isAnimating has to be true');
             return;
           }
 
@@ -656,7 +656,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
            * in terms of a linear curve.
            */
 
-          newStepValue += Object(_cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__["g"])([0, 0], [0.4, 0], [0.6, 1], [1, 1], Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, adjustedStepValue, 0.9999))[0] || 0;
+          newStepValue += Object(_cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__["g"])([0, 0], [0.4, 0], [0.6, 1], [1, 1], Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["j"])(0, adjustedStepValue, 0.9999))[0] || 0;
           var playTo = this._isOpen ? !shouldComplete : shouldComplete;
           this.animation.easing('cubic-bezier(0.4, 0.0, 0.6, 1)').onFinish(function () {
             return _this2.afterAnimation(shouldOpen);
@@ -667,7 +667,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "beforeAnimation",
         value: function beforeAnimation(shouldOpen) {
-          Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(!this.isAnimating, '_before() should not be called while animating'); // this places the menu into the correct location before it animates in
+          Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(!this.isAnimating, '_before() should not be called while animating'); // this places the menu into the correct location before it animates in
           // this css class doesn't actually kick off any animations
 
           this.el.classList.add(SHOW_MENU);
@@ -688,7 +688,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "afterAnimation",
         value: function afterAnimation(isOpen) {
-          Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(this.isAnimating, '_before() should be called while animating'); // keep opening/closing the menu disabled for a touch more yet
+          Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(this.isAnimating, '_before() should be called while animating'); // keep opening/closing the menu disabled for a touch more yet
           // only add listeners/css if it's enabled and isOpen
           // and only remove listeners/css if it's not open
           // emit opened/closed events
@@ -744,15 +744,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           if (!this.disabled) {
-            _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"]._setActiveMenu(this);
+            _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"]._setActiveMenu(this);
           }
 
-          Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(!this.isAnimating, 'can not be animating');
+          Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(!this.isAnimating, 'can not be animating');
         }
       }, {
         key: "forceClosing",
         value: function forceClosing() {
-          Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(this._isOpen, 'menu cannot be closed');
+          Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_4__["l"])(this._isOpen, 'menu cannot be closed');
           this.isAnimating = true;
           var ani = this.animation.direction('reverse');
           ani.play({
@@ -770,17 +770,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               type = this.type,
               disabled = this.disabled,
               isPaneVisible = this.isPaneVisible;
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             role: "navigation",
             "class": (_class = {}, _defineProperty(_class, mode, true), _defineProperty(_class, "menu-type-".concat(type), true), _defineProperty(_class, 'menu-enabled', !disabled), _defineProperty(_class, 'menu-side-end', isEndSide), _defineProperty(_class, 'menu-side-start', !isEndSide), _defineProperty(_class, 'menu-pane-visible', isPaneVisible), _class)
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
             "class": "menu-inner",
             part: "container",
             ref: function ref(el) {
               return _this3.menuInnerEl = el;
             }
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", {
             ref: function ref(el) {
               return _this3.backdropEl = el;
             },
@@ -793,7 +793,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }], [{
         key: "watchers",
@@ -838,7 +838,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             switch (_context6.prev = _context6.next) {
               case 0:
                 _context6.next = 2;
-                return _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"].get(menu);
+                return _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"].get(menu);
 
               case 2:
                 menuEl = _context6.sent;
@@ -880,7 +880,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _classCallCheck(this, MenuButton);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.visible = false;
         /**
          * If `true`, the user cannot interact with the menu button.
@@ -902,7 +902,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             while (1) {
               switch (_context7.prev = _context7.next) {
                 case 0:
-                  return _context7.abrupt("return", _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"].toggle(_this4.menu));
+                  return _context7.abrupt("return", _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"].toggle(_this4.menu));
 
                 case 1:
                 case "end":
@@ -949,50 +949,44 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "render",
         value: function render() {
+          var _Object;
+
           var color = this.color,
               disabled = this.disabled;
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
 
-          var menuIcon = _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuIcon', mode === 'ios' ? 'menu-outline' : 'menu-sharp');
+          var menuIcon = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuIcon', mode === 'ios' ? 'menu-outline' : 'menu-sharp');
 
           var hidden = this.autoHide && !this.visible;
           var attrs = {
             type: this.type
           };
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             onClick: this.onClick,
             "aria-disabled": disabled ? 'true' : null,
             "aria-hidden": hidden ? 'true' : null,
-            "class": Object.assign(Object.assign(_defineProperty({}, mode, true), Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_8__["c"])(color)), {
-              'button': true,
-              'menu-button-hidden': hidden,
-              'menu-button-disabled': disabled,
-              'in-toolbar': Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_8__["h"])('ion-toolbar', this.el),
-              'in-toolbar-color': Object(_theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_8__["h"])('ion-toolbar[color]', this.el),
-              'ion-activatable': true,
-              'ion-focusable': true
-            })
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", Object.assign({}, attrs, {
+            "class": Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["c"])(color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, 'button', true), _defineProperty(_Object, 'menu-button-hidden', hidden), _defineProperty(_Object, 'menu-button-disabled', disabled), _defineProperty(_Object, 'in-toolbar', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["h"])('ion-toolbar', this.el)), _defineProperty(_Object, 'in-toolbar-color', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object, 'ion-activatable', true), _defineProperty(_Object, 'ion-focusable', true), _Object))
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", Object.assign({}, attrs, {
             disabled: disabled,
             "class": "button-native",
             part: "native",
             "aria-label": "menu"
-          }), Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
+          }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
             "class": "button-inner"
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
             part: "icon",
             icon: menuIcon,
             mode: mode,
             lazy: false,
             "aria-hidden": "true"
-          }))), mode === 'md' && Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
+          }))), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
             type: "unbounded"
           })));
         }
       }, {
         key: "el",
         get: function get() {
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
         }
       }]);
 
@@ -1011,7 +1005,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _classCallCheck(this, MenuToggle);
 
-        Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.visible = false;
         /**
          * Automatically hides the content when the corresponding menu is not active.
@@ -1023,7 +1017,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.autoHide = true;
 
         this.onClick = function () {
-          return _index_a8b25bef_js__WEBPACK_IMPORTED_MODULE_7__["m"].toggle(_this5.menu);
+          return _index_0d58a5bf_js__WEBPACK_IMPORTED_MODULE_5__["m"].toggle(_this5.menu);
         };
       }
 
@@ -1065,13 +1059,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function render() {
           var _class2;
 
-          var mode = Object(_ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
           var hidden = this.autoHide && !this.visible;
-          return Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
             onClick: this.onClick,
             "aria-hidden": hidden ? 'true' : null,
             "class": (_class2 = {}, _defineProperty(_class2, mode, true), _defineProperty(_class2, 'menu-toggle-hidden', hidden), _class2)
-          }, Object(_index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
+          }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
         }
       }]);
 
