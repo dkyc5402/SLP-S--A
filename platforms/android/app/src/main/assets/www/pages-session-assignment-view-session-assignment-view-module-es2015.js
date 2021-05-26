@@ -38275,7 +38275,7 @@ let SessionAssignmentViewPage = class SessionAssignmentViewPage {
                             function getBody(bodyItem) {
                                 return bodyItem.lines;
                             }
-                            function getWidth(bodyLines) {
+                            function getSelectedValuesArray(bodyLines) {
                                 var puData = [];
                                 bodyLines.forEach(getValues);
                                 function getValues(value, index, array) {
@@ -38366,7 +38366,7 @@ let SessionAssignmentViewPage = class SessionAssignmentViewPage {
                                 var studentName = titleLines[0].substring(0, titleLines[0].indexOf(","));
                                 var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length);
                                 var bodyLines = tooltipModel.body.map(getBody);
-                                var selectedValues = getWidth(bodyLines);
+                                var selectedValues = getSelectedValuesArray(bodyLines);
                                 let imgSrc;
                                 // getting img of asgmtDisc
                                 for (var i = 0; i < this.asgmtdiscusslist.length; i++) {

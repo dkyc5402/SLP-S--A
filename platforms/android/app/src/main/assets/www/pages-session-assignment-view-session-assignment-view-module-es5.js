@@ -36878,7 +36878,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       return bodyItem.lines;
                     }
 
-                    function getWidth(bodyLines) {
+                    function getSelectedValuesArray(bodyLines) {
                       var puData = [];
                       bodyLines.forEach(getValues);
 
@@ -36975,7 +36975,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       var studentName = titleLines[0].substring(0, titleLines[0].indexOf(","));
                       var asgmtDiscussId = titleLines[0].substring(titleLines[0].indexOf(",") + 2, titleLines[0].length);
                       var bodyLines = tooltipModel.body.map(getBody);
-                      var selectedValues = getWidth(bodyLines);
+                      var selectedValues = getSelectedValuesArray(bodyLines);
                       var imgSrc; // getting img of asgmtDisc
 
                       for (var i = 0; i < _this5.asgmtdiscusslist.length; i++) {
